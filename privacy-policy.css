@@ -124,44 +124,32 @@
   text-decoration: none;
 }
 
-.home-container1 {
+.privacy-policy-container1 {
   width: 100%;
   display: block;
   min-height: 100vh;
 }
  
-.home-thq-hero-main-content-elm {
-  height: 1028px;
-}
- 
-.home-thq-btn-elm1 {
-  text-decoration: none;
-}
- 
-.home-thq-btn-elm2 {
-  text-decoration: none;
-}
- 
-.home-thq-btn-elm3 {
-  text-decoration: none;
-}
- 
-.home-thq-btn-elm4 {
-  text-decoration: none;
-}
- 
-.home-container2 {
+.privacy-policy-container2 {
   display: none;
 }
  
-.home-container3 {
+.privacy-policy-container3 {
   display: contents;
 }
  
-.home-container4 {
+.privacy-policy-container4 {
   display: none;
 }
  
-.home-container5 {
+.privacy-policy-container5 {
+  display: contents;
+}
+ 
+.privacy-policy-container6 {
+  display: none;
+}
+ 
+.privacy-policy-container7 {
   display: contents;
 }
