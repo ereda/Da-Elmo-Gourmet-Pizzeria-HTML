@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://lovely-oval-pig-qbf8l5.teleporthq.app/privacy</loc>
+    <lastmod>2025-12-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lovely-oval-pig-qbf8l5.teleporthq.app/privacy-policy</loc>
+    <lastmod>2025-12-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lovely-oval-pig-qbf8l5.teleporthq.app</loc>
     <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -25,7 +37,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lovely-oval-pig-qbf8l5.teleporthq.app/privacy-policy</loc>
+    <loc>https://lovely-oval-pig-qbf8l5.teleporthq.app/terms</loc>
     <lastmod>2025-12-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

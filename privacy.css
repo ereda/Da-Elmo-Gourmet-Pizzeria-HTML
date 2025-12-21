@@ -1,0 +1,300 @@
+.navigation-wrapper {
+  display: contents;
+}
+ 
+.navigation-container10 {
+  display: contents;
+}
+ 
+.navigation-container11 {
+  display: none;
+}
+ 
+.navigation-container12 {
+  display: contents;
+}
+ 
+.navigation-thq-navigation-container-elm {
+  height: 80px;
+}
+ 
+.navigation-thq-nav-logo-icon-elm {
+  margin-right: 14px;
+}
+ 
+.navigation-thq-nav-logo-elm {
+  height: 70px;
+}
+ 
+.navigation-thq-nav-logo-text-elm {
+  align-self: center;
+  flex-shrink: 0;
+}
+ 
+.navigation-thq-navigation-link-item-elm1 {
+  text-decoration: none;
+}
+ 
+.navigation-thq-navigation-link-item-elm2 {
+  text-decoration: none;
+}
+ 
+.navigation-thq-navigation-link-item-elm3 {
+  text-decoration: none;
+}
+ 
+.navigation-thq-navigation-link-item-elm4 {
+  text-decoration: none;
+}
+ 
+.navigation-thq-navigation-toggle-icon-elm {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+ 
+.navigation-thq-navigation-close-icon-elm {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+ 
+.navigation-container21 {
+  display: none;
+}
+ 
+.navigation-container22 {
+  display: contents;
+}
+ 
+.navigation-container23 {
+  display: none;
+}
+ 
+.navigation-container24 {
+  display: contents;
+}
+
+.content-list2-wrapper {
+  display: contents;
+}
+ 
+.content-list2-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.content-list2-thq-max-width-elm {
+  width: 100%;
+  display: flex;
+  max-width: var(--dl-layout-size-maxwidth);
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.content-list2-thq-content-elm {
+  align-self: stretch;
+  align-items: flex-start;
+}
+ 
+.content-list2-li1 {
+  align-items: flex-start;
+}
+ 
+.content-list2-thq-heading1-elm {
+  align-self: flex-start;
+}
+ 
+.content-list2-ul2 {
+  align-items: flex-start;
+  padding-left: var(--dl-layout-space-fiveunits);
+}
+ 
+.privacy-fragment2 {
+  display: contents;
+}
+ 
+.privacy-text13 {
+  display: inline-block;
+}
+ 
+.privacy-fragment5 {
+  display: contents;
+}
+ 
+.privacy-text20 {
+  display: inline-block;
+}
+ 
+.privacy-fragment4 {
+  display: contents;
+}
+ 
+.privacy-text19 {
+  display: inline-block;
+}
+ 
+.privacy-fragment7 {
+  display: contents;
+}
+ 
+.privacy-text26 {
+  display: inline-block;
+}
+ 
+.privacy-fragment3 {
+  display: contents;
+}
+ 
+.privacy-text16 {
+  display: inline-block;
+}
+ 
+.privacy-fragment6 {
+  display: contents;
+}
+ 
+.privacy-text23 {
+  display: inline-block;
+}
+ 
+.privacy-fragment1 {
+  display: contents;
+}
+ 
+.privacy-text10 {
+  display: inline-block;
+}
+ 
+@media(max-width: 767px) {
+  .content-list2-ul2 {
+    padding-left: var(--dl-layout-space-threeunits);
+  }
+}
+ 
+@media(max-width: 479px) {
+  .content-list2-ul2 {
+    padding-left: var(--dl-layout-space-oneandhalfunits);
+  }
+}
+
+.footer-wrapper {
+  display: contents;
+}
+ 
+.footer-container {
+  display: contents;
+}
+ 
+.footer-thq-footer-logo-container-elm {
+  backdrop-filter: blur(5px);
+}
+ 
+.footer-image {
+  width: 200px;
+  object-fit: cover;
+}
+ 
+.footer-thq-footer-nav-link-elm1 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-nav-link-elm2 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-nav-link-elm3 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-nav-link-elm4 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-delivery-badge-elm1 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-delivery-badge-elm2 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-social-link-elm {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-legal-link-elm1 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-legal-link-elm2 {
+  text-decoration: none;
+}
+
+.privacy-container {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+ 
+.privacy-fragment1 {
+  display: contents;
+}
+ 
+.privacy-text10 {
+  display: inline-block;
+}
+ 
+.privacy-fragment2 {
+  display: contents;
+}
+ 
+.privacy-text13 {
+  display: inline-block;
+}
+ 
+.privacy-fragment3 {
+  display: contents;
+}
+ 
+.privacy-text16 {
+  display: inline-block;
+}
+ 
+.privacy-fragment4 {
+  display: contents;
+}
+ 
+.privacy-text19 {
+  display: inline-block;
+}
+ 
+.privacy-fragment5 {
+  display: contents;
+}
+ 
+.privacy-text20 {
+  display: inline-block;
+}
+ 
+.privacy-fragment6 {
+  display: contents;
+}
+ 
+.privacy-text23 {
+  display: inline-block;
+}
+ 
+.privacy-fragment7 {
+  display: contents;
+}
+ 
+.privacy-text26 {
+  display: inline-block;
+}
