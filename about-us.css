@@ -134,6 +134,19 @@
   text-decoration: none;
 }
  
+.about-us-text20 {
+  color: #0b0b0b;
+  font-size: inherit;
+  letter-spacing: 0.02em;
+}
+ 
+.about-us-text25 {
+  color: #0b0b0b;
+  font-size: inherit;
+  letter-spacing: 0.02em;
+  background-color: rgba(0, 0, 0, 0);
+}
+ 
 .about-us-container2 {
   display: none;
 }
