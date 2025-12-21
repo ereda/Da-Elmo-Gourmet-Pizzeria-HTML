@@ -1,0 +1,163 @@
+.navigation-wrapper {
+  display: contents;
+}
+ 
+.navigation-container10 {
+  display: contents;
+}
+ 
+.navigation-container11 {
+  display: none;
+}
+ 
+.navigation-container12 {
+  display: contents;
+}
+ 
+.navigation-thq-navigation-container-elm {
+  height: 80px;
+}
+ 
+.navigation-thq-nav-logo-icon-elm {
+  margin-right: 14px;
+}
+ 
+.navigation-thq-nav-logo-elm {
+  height: 70px;
+}
+ 
+.navigation-thq-nav-logo-text-elm {
+  align-self: center;
+  flex-shrink: 0;
+}
+ 
+.navigation-thq-navigation-link-item-elm1 {
+  text-decoration: none;
+}
+ 
+.navigation-thq-navigation-link-item-elm2 {
+  text-decoration: none;
+}
+ 
+.navigation-thq-navigation-link-item-elm3 {
+  text-decoration: none;
+}
+ 
+.navigation-thq-navigation-link-item-elm4 {
+  text-decoration: none;
+}
+ 
+.navigation-thq-navigation-toggle-icon-elm {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+ 
+.navigation-thq-navigation-close-icon-elm {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+ 
+.navigation-container21 {
+  display: none;
+}
+ 
+.navigation-container22 {
+  display: contents;
+}
+ 
+.navigation-container23 {
+  display: none;
+}
+ 
+.navigation-container24 {
+  display: contents;
+}
+
+.footer-wrapper {
+  display: contents;
+}
+ 
+.footer-container {
+  display: contents;
+}
+ 
+.footer-thq-footer-logo-container-elm {
+  backdrop-filter: blur(5px);
+}
+ 
+.footer-image {
+  width: 200px;
+  object-fit: cover;
+}
+ 
+.footer-thq-footer-nav-link-elm1 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-nav-link-elm2 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-nav-link-elm3 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-nav-link-elm4 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-delivery-badge-elm1 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-delivery-badge-elm2 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-social-link-elm {
+  text-decoration: none;
+}
+
+.home-container1 {
+  width: 100%;
+  display: block;
+  min-height: 100vh;
+}
+ 
+.home-thq-hero-main-content-elm {
+  height: 1028px;
+}
+ 
+.home-thq-btn-elm1 {
+  text-decoration: none;
+}
+ 
+.home-thq-btn-elm2 {
+  text-decoration: none;
+}
+ 
+.home-thq-btn-elm3 {
+  text-decoration: none;
+}
+ 
+.home-thq-btn-elm4 {
+  text-decoration: none;
+}
+ 
+.home-container2 {
+  display: none;
+}
+ 
+.home-container3 {
+  display: contents;
+}
+ 
+.home-container4 {
+  display: none;
+}
+ 
+.home-container5 {
+  display: contents;
+}

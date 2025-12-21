@@ -1,0 +1,40 @@
+.footer-container {
+  display: contents;
+}
+ 
+.footer-thq-footer-logo-container-elm {
+  backdrop-filter: blur(5px);
+}
+ 
+.footer-image {
+  width: 200px;
+  object-fit: cover;
+}
+ 
+.footer-thq-footer-nav-link-elm1 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-nav-link-elm2 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-nav-link-elm3 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-nav-link-elm4 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-delivery-badge-elm1 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-delivery-badge-elm2 {
+  text-decoration: none;
+}
+ 
+.footer-thq-footer-social-link-elm {
+  text-decoration: none;
+}
