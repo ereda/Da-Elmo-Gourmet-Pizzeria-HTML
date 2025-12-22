@@ -6427,6 +6427,7 @@
  
 .microgreens-quality__card-text {
   color: var(--color-on-surface);
+  font-style: italic;
 }
  
 .sustainability-quality {
