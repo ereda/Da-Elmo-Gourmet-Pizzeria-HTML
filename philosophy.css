@@ -138,6 +138,10 @@
   min-height: 100vh;
 }
  
+.philosophy-thq-microgreens-qualitygrid-elm {
+  display: flex;
+}
+ 
 .philosophy-thq-gallery-qualitygrid-elm {
   display: flex;
 }
