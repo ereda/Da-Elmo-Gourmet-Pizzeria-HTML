@@ -162,6 +162,14 @@
   display: flex;
 }
  
+.philosophy-thq-btn-elm1 {
+  text-decoration: none;
+}
+ 
+.philosophy-thq-btn-elm2 {
+  text-decoration: none;
+}
+ 
 .philosophy-container2 {
   display: none;
 }
