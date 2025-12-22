@@ -63,19 +63,19 @@
   display: block;
 }
  
-.navigation-container22 {
-  display: none;
-}
- 
-.navigation-container23 {
-  display: contents;
-}
- 
 .navigation-container24 {
   display: none;
 }
  
 .navigation-container25 {
+  display: contents;
+}
+ 
+.navigation-container26 {
+  display: none;
+}
+ 
+.navigation-container27 {
   display: contents;
 }
 
@@ -156,120 +156,6 @@
  
 .gourmet-pizza-menu-thq-hero-carouselbg-layer-elm3 {
   background-image: url('https://images.pexels.com/photos/23017570/pexels-photo-23017570.jpeg?auto=compress&cs=tinysrgb&w=1500');
-}
- 
-.gourmet-pizza-menu-thq-pizza-gallerycarousel-track-elm {
-  gap: var(--spacing-lg);
-  height: 767px;
-  display: flex;
-  position: relative;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-}
- 
-.gourmet-pizza-menu-thq-pizza-gallerycarousel-item-elm1 {
-  opacity: 1;
-  position: relative;
-  min-width: 100%;
-  visibility: visible;
-  flex-shrink: 0;
-}
- 
-.gourmet-pizza-menu-thq-pizza-galleryitem-bg-elm1 {
-  background-image: url('https://images.pexels.com/photos/14373594/pexels-photo-14373594.jpeg?auto=compress&cs=tinysrgb&w=1500');
-}
- 
-.gourmet-pizza-menu-thq-pizza-galleryitem-details-elm1 {
-  min-height: auto;
-  padding-bottom: 24px;
-}
- 
-.gourmet-pizza-menu-thq-pizza-gallerydetail-section-elm10 {
-  padding-bottom: 24px;
-}
- 
-.gourmet-pizza-menu-thq-pizza-gallerydetail-section-elm11 {
-  padding-bottom: 24px;
-}
- 
-.gourmet-pizza-menu-thq-pizza-gallerydetail-section-elm12 {
-  padding-bottom: 24px;
-}
- 
-.gourmet-pizza-menu-thq-pizza-gallerycarousel-item-elm2 {
-  opacity: 1;
-  position: relative;
-  min-width: 100%;
-  visibility: visible;
-  flex-shrink: 0;
-}
- 
-.gourmet-pizza-menu-thq-pizza-galleryitem-bg-elm2 {
-  background-image: url('https://images.pexels.com/photos/5953576/pexels-photo-5953576.jpeg?auto=compress&cs=tinysrgb&w=1500');
-}
- 
-.gourmet-pizza-menu-thq-pizza-gallerycarousel-item-elm3 {
-  opacity: 1;
-  position: relative;
-  min-width: 100%;
-  visibility: visible;
-  flex-shrink: 0;
-}
- 
-.gourmet-pizza-menu-thq-pizza-galleryitem-bg-elm3 {
-  background-image: url('https://images.pexels.com/photos/8251350/pexels-photo-8251350.jpeg?auto=compress&cs=tinysrgb&w=1500');
-}
- 
-.gourmet-pizza-menu-text31 {
-  font-size: inherit;
-  letter-spacing: 0.02em;
-}
- 
-.gourmet-pizza-menu-thq-pizza-gallerycarousel-item-elm4 {
-  opacity: 1;
-  position: relative;
-  min-width: 100%;
-  visibility: visible;
-  flex-shrink: 0;
-}
- 
-.gourmet-pizza-menu-thq-pizza-galleryitem-bg-elm4 {
-  background-image: url('https://images.pexels.com/photos/5953532/pexels-photo-5953532.jpeg?auto=compress&cs=tinysrgb&w=1500');
-}
- 
-.gourmet-pizza-menu-text34 {
-  font-size: inherit;
-  letter-spacing: 0.02em;
-}
- 
-.gourmet-pizza-menu-thq-pizza-gallerycarousel-item-elm5 {
-  opacity: 1;
-  position: relative;
-  min-width: 100%;
-  visibility: visible;
-  flex-shrink: 0;
-}
- 
-.gourmet-pizza-menu-thq-pizza-galleryitem-bg-elm5 {
-  background-image: url('https://images.pexels.com/photos/29422006/pexels-photo-29422006.jpeg?auto=compress&cs=tinysrgb&w=1500');
-}
- 
-.gourmet-pizza-menu-thq-pizza-gallerycarousel-item-elm6 {
-  opacity: 1;
-  position: relative;
-  min-width: 100%;
-  visibility: visible;
-  flex-shrink: 0;
-}
- 
-.gourmet-pizza-menu-thq-pizza-galleryitem-bg-elm6 {
-  background-image: url('https://images.pexels.com/photos/2918537/pexels-photo-2918537.jpeg?auto=compress&cs=tinysrgb&w=1500');
-}
- 
-.gourmet-pizza-menu-text38 {
-  font-size: inherit;
-  letter-spacing: 0.02em;
 }
  
 .gourmet-pizza-menu-container3 {

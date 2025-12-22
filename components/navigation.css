@@ -59,18 +59,18 @@
   display: block;
 }
  
-.navigation-container22 {
-  display: none;
-}
- 
-.navigation-container23 {
-  display: contents;
-}
- 
 .navigation-container24 {
   display: none;
 }
  
 .navigation-container25 {
+  display: contents;
+}
+ 
+.navigation-container26 {
+  display: none;
+}
+ 
+.navigation-container27 {
   display: contents;
 }

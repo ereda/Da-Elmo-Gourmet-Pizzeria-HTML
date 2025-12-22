@@ -63,19 +63,19 @@
   display: block;
 }
  
-.navigation-container22 {
-  display: none;
-}
- 
-.navigation-container23 {
-  display: contents;
-}
- 
 .navigation-container24 {
   display: none;
 }
  
 .navigation-container25 {
+  display: contents;
+}
+ 
+.navigation-container26 {
+  display: none;
+}
+ 
+.navigation-container27 {
   display: contents;
 }
 
@@ -191,10 +191,6 @@
 .delivery-sustainability-text15 {
   font-size: inherit;
   letter-spacing: 0.02em;
-}
- 
-.delivery-sustainability-thq-btn-elm5 {
-  text-decoration: none;
 }
  
 .delivery-sustainability-container5 {
