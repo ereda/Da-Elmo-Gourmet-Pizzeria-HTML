@@ -43,6 +43,10 @@
   text-decoration: none;
 }
  
+.navigation-thq-navigation-link-item-elm5 {
+  text-decoration: none;
+}
+ 
 .navigation-thq-navigation-toggle-icon-elm {
   width: 28px;
   height: 28px;
@@ -55,18 +59,18 @@
   display: block;
 }
  
-.navigation-container21 {
-  display: none;
-}
- 
 .navigation-container22 {
-  display: contents;
+  display: none;
 }
  
 .navigation-container23 {
-  display: none;
+  display: contents;
 }
  
 .navigation-container24 {
+  display: none;
+}
+ 
+.navigation-container25 {
   display: contents;
 }
