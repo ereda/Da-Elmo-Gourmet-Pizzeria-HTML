@@ -142,6 +142,11 @@
   background-image: url('https://images.pexels.com/photos/5640042/pexels-photo-5640042.jpeg?auto=compress&cs=tinysrgb&w=1500');
 }
  
+.gourmet-pizza-menu-text11 {
+  font-size: inherit;
+  letter-spacing: 0.02em;
+}
+ 
 .gourmet-pizza-menu-thq-btn-elm1 {
   text-decoration: none;
 }
