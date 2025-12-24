@@ -158,13 +158,24 @@
   text-decoration: none;
 }
  
-.home-text24 {
+.home-text21 {
   color: #0b0b0b;
   font-size: inherit;
   letter-spacing: 0.02em;
 }
  
-.home-text27 {
+.home-text24 {
+  font-size: inherit;
+  letter-spacing: 0.02em;
+}
+ 
+.home-text26 {
+  color: #0b0b0b;
+  font-size: inherit;
+  letter-spacing: 0.02em;
+}
+ 
+.home-text29 {
   font-size: inherit;
   letter-spacing: 0.02em;
 }
