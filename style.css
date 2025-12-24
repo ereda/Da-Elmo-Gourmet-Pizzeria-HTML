@@ -6861,6 +6861,60 @@
  
 
  
+.premium-description {
+  color: var(--color-on-surface);
+  margin: 0 auto;
+  font-size: var(--font-size-lg);
+  max-width: 65ch;
+  text-align: center;
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-body);
+}
+ 
+.instruction-paragraph-wrapper {
+  gap: var(--spacing-md);
+  margin: 0 auto;
+  display: flex;
+  padding: var(--spacing-xl);
+  max-width: 48rem;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 8%, transparent), transparent);
+  align-items: flex-start;
+  border-left: 3px solid var(--color-secondary);
+  border-radius: var(--border-radius-md);
+}
+ 
+.instruction-icon-container {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  background: var(--color-secondary);
+  box-shadow: var(--shadow-level-2);
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--border-radius-full);
+  justify-content: center;
+}
+ 
+.instruction-text {
+  flex: 1;
+  color: var(--color-on-surface);
+  margin: 0;
+}
+ 
+.instruction-icon {
+  color: var(--color-on-secondary);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+ 
+.accordion-paragraph {
+  color: var(--color-on-surface);
+  max-width: 65ch;
+  margin-top: var(--spacing-md);
+}
+ 
 .Headings {
   font-size: 2em;
   font-family: Playfair Display;
@@ -7881,6 +7935,23 @@
   }
   .cta-quality__button {
     width: 100%;
+  }
+  .premium-description {
+    padding: 0 var(--spacing-md);
+    font-size: var(--font-size-base);
+    max-width: 100%;
+  }
+  .instruction-paragraph-wrapper {
+    gap: var(--spacing-sm);
+    padding: var(--spacing-lg);
+  }
+  .instruction-icon-container {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .instruction-icon {
+    width: 1.25rem;
+    height: 1.25rem;
   }
 }
  
