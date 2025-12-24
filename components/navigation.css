@@ -53,6 +53,11 @@
   display: block;
 }
  
+.navigation-image {
+  width: 200px;
+  object-fit: cover;
+}
+ 
 .navigation-thq-navigation-close-icon-elm {
   width: 28px;
   height: 28px;
