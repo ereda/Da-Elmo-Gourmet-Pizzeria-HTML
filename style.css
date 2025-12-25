@@ -1318,7 +1318,6 @@
   display: flex;
   overflow: hidden;
   position: relative;
-  min-height: 100vh;
   align-items: center;
 }
  
@@ -1441,7 +1440,7 @@
   display: flex;
   overflow: hidden;
   position: relative;
-  min-height: 100vh;
+  
   align-items: center;
 }
  
@@ -1478,7 +1477,7 @@
   position: relative;
   min-height: 100vh;
   align-items: center;
-}
+}  
  
 .cta-delivery-container {
   gap: var(--spacing-2xl);
