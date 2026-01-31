@@ -65,6 +65,7 @@
   </head>
   <body>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./language-switcher.css" />
     <div>
       <link href="./philosophy.css" rel="stylesheet" />
 
@@ -130,7 +131,7 @@
                     >
                       <div>
                         <div class="thq-navigation-link-elm1 navigation-link">
-                          <span>Homepage</span>
+                          <span data-i18n="nav.homepage">Homepage</span>
                         </div>
                       </div>
                     </li>
@@ -141,7 +142,7 @@
                     >
                       <div>
                         <div class="thq-navigation-link-elm2 navigation-link">
-                          <span>Gourmet Pizza Menu</span>
+                          <span data-i18n="nav.menu">Gourmet Pizza Menu</span>
                         </div>
                       </div>
                     </li>
@@ -152,7 +153,7 @@
                     >
                       <div>
                         <div class="thq-navigation-link-elm2 navigation-link">
-                          <span>Our Philosophy</span>
+                          <span data-i18n="nav.philosophy">Our Philosophy</span>
                         </div>
                       </div>
                     </li>
@@ -163,7 +164,7 @@
                     >
                       <div>
                         <div class="thq-navigation-link-elm3 navigation-link">
-                          <span>About Us</span>
+                          <span data-i18n="nav.about">About Us</span>
                         </div>
                       </div>
                     </li>
@@ -174,7 +175,7 @@
                     >
                       <div>
                         <div class="navigation-link thq-navigation-link-elm4">
-                          <span>Delivery &amp; Sustainability</span>
+                          <span data-i18n="nav.delivery">Delivery &amp; Sustainability</span>
                         </div>
                       </div>
                     </li>
@@ -202,6 +203,10 @@
                     ></path>
                   </svg>
                 </button>
+                <div class="language-switcher">
+                  <button class="language-switcher-btn active" data-lang="en">EN</button>
+                  <button class="language-switcher-btn" data-lang="fr">FR</button>
+                </div>
               </div>
               <div class="navigation-overlay">
                 <div class="navigation-overlay-header">
@@ -247,7 +252,7 @@
                     <a href="index.html">
                       <div>
                         <div class="navigation-overlay-link">
-                          <span>Homepage</span>
+                          <span data-i18n="nav.homepage">Homepage</span>
                         </div>
                       </div>
                     </a>
@@ -259,7 +264,7 @@
                     <a href="gourmet-pizza-menu.html">
                       <div>
                         <div class="navigation-overlay-link">
-                          <span>Gourmet Pizza Menu</span>
+                          <span data-i18n="nav.menu">Gourmet Pizza Menu</span>
                         </div>
                       </div>
                     </a>
@@ -269,7 +274,7 @@
                       <div>
                         <div>
                           <div class="navigation-overlay-link">
-                            <span>Our Philosophy</span>
+                            <span data-i18n="nav.philosophy">Our Philosophy</span>
                           </div>
                         </div>
                       </div>
@@ -279,7 +284,7 @@
                     <a href="about-us.html">
                       <div>
                         <div class="navigation-overlay-link">
-                          <span>About Us</span>
+                          <span data-i18n="nav.about">About Us</span>
                         </div>
                       </div>
                     </a>
@@ -291,7 +296,7 @@
                     <a href="delivery-sustainability.html">
                       <div>
                         <div class="navigation-overlay-link">
-                          <span>Delivery &amp; Sustainability</span>
+                          <span data-i18n="nav.delivery">Delivery &amp; Sustainability</span>
                         </div>
                       </div>
                     </a>
@@ -387,12 +392,12 @@
                     <path d="m9 12l2 2l4-4"></path>
                   </g>
                 </svg>
-                <span>Uncompromising Quality</span>
+                <span data-i18n="philosophy.hero_badge">Uncompromising Quality</span>
               </div>
-              <h1 class="hero-quality__title hero-title">
+              <h1 class="hero-quality__title hero-title" data-i18n="philosophy.hero_title">
                 Our Culinary Philosophy: Purity in Every Ingredient
               </h1>
-              <p class="hero-quality__subtitle hero-subtitle">
+              <p class="hero-quality__subtitle hero-subtitle" data-i18n="philosophy.hero_subtitle">
                 From San Marzano tomatoes to the pristine essence of avocado oil
                 dough, every element of our craft is chosen with intention. Our
                 signature GMO-free, pesticide-free microgreens complete each
@@ -415,7 +420,7 @@
                       stroke-linejoin="round"
                     ></path>
                   </svg>
-                  <span>Avocado Oil Dough</span>
+                  <span data-i18n="philosophy.pillar1_label">Avocado Oil Dough</span>
                 </div>
                 <div class="hero-quality__pillar">
                   <svg
@@ -439,7 +444,7 @@
                       ></path>
                     </g>
                   </svg>
-                  <span>San Marzano Tomatoes</span>
+                  <span data-i18n="philosophy.pillar2_label">San Marzano Tomatoes</span>
                 </div>
                 <div class="hero-quality__pillar">
                   <svg
@@ -457,7 +462,7 @@
                       stroke-linejoin="round"
                     ></path>
                   </svg>
-                  <span>Microgreen Finishing</span>
+                  <span data-i18n="philosophy.pillar3_label">Microgreen Finishing</span>
                 </div>
               </div>
             </div>
@@ -475,8 +480,8 @@
                   class="foundation-quality__image"
                 />
                 <div class="foundation-quality__detail-badge">
-                  <span class="foundation-quality__detail-label">Origin</span>
-                  <span class="foundation-quality__detail-value">
+                  <span class="foundation-quality__detail-label" data-i18n="philosophy.sanmarzano_badge_label">Origin</span>
+                  <span class="foundation-quality__detail-value" data-i18n="philosophy.sanmarzano_badge_value">
                     San Marzano DOP
                   </span>
                 </div>
@@ -506,18 +511,18 @@
                       ></path>
                     </g>
                   </svg>
-                  <h2 class="section-title foundation-quality__heading">
+                  <h2 class="section-title foundation-quality__heading" data-i18n="philosophy.sanmarzano_title">
                     San Marzano Tomatoes: The Heart of Authenticity
                   </h2>
                 </div>
                 <div class="foundation-quality__text section-content">
-                  <p>
+                  <p data-i18n="philosophy.sanmarzano_text1">
                     Our sauce begins with certified San Marzano tomatoes. These
                     legendary tomatoes possess a naturally lower acidity,
                     thicker flesh, and fewer seeds, delivering a rich, balanced
                     sweetness that defines true Italian pizza.
                   </p>
-                  <p>
+                  <p data-i18n="philosophy.sanmarzano_text2">
                     We slow-simmer our tomatoes with a minimal blend of sea
                     salt, extra virgin olive oil, and fresh basil, allowing the
                     pure fruit flavor to shine. No added sugars, no
@@ -546,7 +551,7 @@
                         <path d="m9 12l2 2l4-4"></path>
                       </g>
                     </svg>
-                    <span>DOP Certified</span>
+                    <span data-i18n="philosophy.sanmarzano_feature1">DOP Certified</span>
                   </div>
                   <div class="foundation-quality__feature">
                     <svg
@@ -568,7 +573,7 @@
                         <path d="m9 12l2 2l4-4"></path>
                       </g>
                     </svg>
-                    <span>No Preservatives</span>
+                    <span data-i18n="philosophy.sanmarzano_feature2">No Preservatives</span>
                   </div>
                 </div>
               </div>
@@ -585,10 +590,10 @@
                   class="foundation-quality__image"
                 />
                 <div class="foundation-quality__detail-badge">
-                  <span class="foundation-quality__detail-label">
+                  <span class="foundation-quality__detail-label" data-i18n="philosophy.avocado_badge_label">
                     Key Ingredient
                   </span>
-                  <span class="foundation-quality__detail-value">
+                  <span class="foundation-quality__detail-value" data-i18n="philosophy.avocado_badge_value">
                     Premium Avocado Oil
                   </span>
                 </div>
@@ -612,12 +617,12 @@
                       stroke-linejoin="round"
                     ></path>
                   </svg>
-                  <h2 class="section-title foundation-quality__heading">
+                  <h2 class="section-title foundation-quality__heading" data-i18n="philosophy.avocado_title">
                     Avocado Oil Dough: The Foundation of Flavor
                   </h2>
                 </div>
                 <div class="foundation-quality__text section-content">
-                  <p>
+                  <p data-i18n="philosophy.avocado_text1">
                     Our signature dough is handcrafted daily using premium
                     avocado oil—a deliberate choice that elevates both nutrition
                     and taste. Unlike traditional olive oil or butter-based
@@ -625,7 +630,7 @@
                     a higher smoke point, creating a perfectly crisp exterior
                     while maintaining a tender, airy crumb.
                   </p>
-                  <p>
+                  <p data-i18n="philosophy.avocado_text2">
                     We blend our avocado oil with high-protein flour, sea salt,
                     and a carefully balanced fermentation process that develops
                     complex flavours over 48 hours. The result is a crust that's
@@ -654,7 +659,7 @@
                         <path d="m9 12l2 2l4-4"></path>
                       </g>
                     </svg>
-                    <span>48-Hour Fermentation</span>
+                    <span data-i18n="philosophy.avocado_feature1">48-Hour Fermentation</span>
                   </div>
                   <div class="foundation-quality__feature">
                     <svg
@@ -676,7 +681,7 @@
                         <path d="m9 12l2 2l4-4"></path>
                       </g>
                     </svg>
-                    <span>High-Protein Flour</span>
+                    <span data-i18n="philosophy.avocado_feature2">High-Protein Flour</span>
                   </div>
                   <div class="foundation-quality__feature">
                     <svg
@@ -698,7 +703,7 @@
                         <path d="m9 12l2 2l4-4"></path>
                       </g>
                     </svg>
-                    <span>Handcrafted</span>
+                    <span data-i18n="philosophy.avocado_feature3">Handcrafted</span>
                   </div>
                 </div>
               </div>
@@ -708,11 +713,11 @@
         <section class="microgreens-quality">
           <div class="microgreens-quality__container">
             <div class="microgreens-quality__header-wrapper">
-              <h2 class="section-title microgreens-quality__title">
+              <h2 class="section-title microgreens-quality__title" data-i18n="philosophy.microgreens_title">
                 The Microgreen Finishing Touch: Purity, Freshness, Perfection
               </h2>
               <p
-                class="section-subtitle microgreens-quality__subtitle BodyFont"
+                class="section-subtitle microgreens-quality__subtitle BodyFont" data-i18n="philosophy.microgreens_subtitle"
               >
                 Our microgreens aren't just for decoration. These are
                 superfoods! Whether it’s baby broccoli or radish, these tiny
@@ -742,17 +747,15 @@
                     ></path>
                   </svg>
                 </div>
-                <h3 class="microgreens-quality__card-title">
+                <h3 class="microgreens-quality__card-title" data-i18n="philosophy.radish_title">
                   Radish Microgreens
                 </h3>
-                <p class="microgreens-quality__card-text section-content">
+                <p class="microgreens-quality__card-text section-content" data-i18n="philosophy.radish_desc">
                   Sharp, peppery bite with a hint of horseradish heat. Cuts
                   through rich meats and cheese.
                 </p>
-                <p class="microgreens-quality__card-text section-content">
-                  <span class="philosophy-text23">
-                    Perfect for: Pepperoni Rustico, Funghi e Cipolla
-                  </span>
+                <p class="microgreens-quality__card-text section-content" data-i18n="philosophy.radish_perfect">
+                  Perfect for: Pepperoni Rustico, Funghi e Cipolla
                   <span></span>
                 </p>
               </div>
@@ -774,13 +777,13 @@
                     ></path>
                   </svg>
                 </div>
-                <h3 class="microgreens-quality__card-title">Baby Arugula</h3>
-                <p class="microgreens-quality__card-text section-content">
+                <h3 class="microgreens-quality__card-title" data-i18n="philosophy.arugula_title">Baby Arugula</h3>
+                <p class="microgreens-quality__card-text section-content" data-i18n="philosophy.arugula_desc">
                   Tender, peppery leaves with a subtle nuttiness. Adds freshness
                   without overpowering delicate flavors.
                 </p>
                 <p
-                  class="philosophy-thq-section-content-elm15 microgreens-quality__card-text section-content"
+                  class="philosophy-thq-section-content-elm15 microgreens-quality__card-text section-content" data-i18n="philosophy.arugula_perfect"
                 >
                   Perfect for: Verde Fresco, Mediterranean Coast
                 </p>
@@ -803,15 +806,15 @@
                     ></path>
                   </svg>
                 </div>
-                <h3 class="microgreens-quality__card-title">
+                <h3 class="microgreens-quality__card-title" data-i18n="philosophy.broccoli_title">
                   Broccoli Microgreens
                 </h3>
-                <p class="microgreens-quality__card-text section-content">
+                <p class="microgreens-quality__card-text section-content" data-i18n="philosophy.broccoli_desc">
                   Classic, slightly peppery flavor with earthy undertones.
                   Harmonizes beautifully with roasted vegetables.
                 </p>
                 <p
-                  class="philosophy-thq-section-content-elm17 microgreens-quality__card-text section-content"
+                  class="philosophy-thq-section-content-elm17 microgreens-quality__card-text section-content" data-i18n="philosophy.broccoli_perfect"
                 >
                   Perfect for: Tuscan Gardener
                 </p>
@@ -834,13 +837,13 @@
                     ></path>
                   </svg>
                 </div>
-                <h3 class="microgreens-quality__card-title">Basil Leaves</h3>
-                <p class="microgreens-quality__card-text section-content">
+                <h3 class="microgreens-quality__card-title" data-i18n="philosophy.basil_title">Basil Leaves</h3>
+                <p class="microgreens-quality__card-text section-content" data-i18n="philosophy.basil_desc">
                   Aromatic, sweet herbaceous flavor with anise undertones. The
                   classic Italian garnish for Margherita-style pizzas.
                 </p>
                 <p
-                  class="philosophy-thq-section-content-elm19 microgreens-quality__card-text section-content"
+                  class="philosophy-thq-section-content-elm19 microgreens-quality__card-text section-content" data-i18n="philosophy.basil_perfect"
                 >
                   Perfect for: Pizza Tricolore, Funghi e Cipolla, Midnight
                   Marinara
@@ -852,10 +855,10 @@
         <section class="sustainability-quality">
           <div class="sustainability-quality__container">
             <div class="sustainability-quality__header-wrapper">
-              <h2 class="section-title sustainability-quality__title">
+              <h2 class="section-title sustainability-quality__title" data-i18n="philosophy.sustainability_title">
                 Sustainable Sourcing &amp; Delivery Excellence
               </h2>
-              <p class="section-subtitle sustainability-quality__subtitle">
+              <p class="section-subtitle sustainability-quality__subtitle" data-i18n="philosophy.sustainability_subtitle">
                 Our commitment extends beyond flavor to environmental
                 responsibility
               </p>
@@ -884,10 +887,10 @@
                     </g>
                   </svg>
                 </div>
-                <h3 class="sustainability-quality__column-title">
+                <h3 class="sustainability-quality__column-title" data-i18n="philosophy.delivery_title">
                   Delivery-Only Model
                 </h3>
-                <p class="section-content sustainability-quality__column-text">
+                <p class="section-content sustainability-quality__column-text" data-i18n="philosophy.delivery_text">
                   Our entire operation is designed for delivery excellence via
                   Uber Eats and DoorDash. We manage timing, packaging, and
                   quality control to ensure every pizza arrives at your door as
@@ -895,10 +898,10 @@
                   with your microgreens ready to finish.
                 </p>
                 <div class="sustainability-quality__tags">
-                  <span class="sustainability-quality__tag">
+                  <span class="sustainability-quality__tag" data-i18n="philosophy.delivery_tag1">
                     Temperature Controlled
                   </span>
-                  <span class="sustainability-quality__tag">
+                  <span class="sustainability-quality__tag" data-i18n="philosophy.delivery_tag2">
                     Optimized Packaging
                   </span>
                 </div>
@@ -921,17 +924,17 @@
                     ></path>
                   </svg>
                 </div>
-                <h3 class="sustainability-quality__column-title">
+                <h3 class="sustainability-quality__column-title" data-i18n="philosophy.packaging_title">
                   Compostable Packaging
                 </h3>
-                <p class="section-content sustainability-quality__column-text">
+                <p class="section-content sustainability-quality__column-text" data-i18n="philosophy.packaging_text">
                   From our microgreen cups to our pizza boxes, every piece of
                   packaging is designed to break down naturally. We eliminate
                   single-use plastics wherever possible.
                 </p>
                 <div class="sustainability-quality__tags">
-                  <span class="sustainability-quality__tag">FSC Certified</span>
-                  <span class="sustainability-quality__tag">Zero Plastic</span>
+                  <span class="sustainability-quality__tag" data-i18n="philosophy.packaging_tag1">FSC Certified</span>
+                  <span class="sustainability-quality__tag" data-i18n="philosophy.packaging_tag2">Zero Plastic</span>
                 </div>
               </div>
             </div>
@@ -948,7 +951,7 @@
                 class="gallery-quality__image"
               />
               <div class="gallery-quality__caption">
-                <span class="gallery-quality__label">San Marzano Tomatoes</span>
+                <span class="gallery-quality__label" data-i18n="philosophy.gallery1_label">San Marzano Tomatoes</span>
               </div>
             </div>
             <div class="gallery-quality__item">
@@ -958,7 +961,7 @@
                 class="gallery-quality__image"
               />
               <div class="gallery-quality__caption">
-                <span class="gallery-quality__label">Microgreen Varieties</span>
+                <span class="gallery-quality__label" data-i18n="philosophy.gallery2_label">Microgreen Varieties</span>
               </div>
             </div>
             <div class="gallery-quality__item">
@@ -968,7 +971,7 @@
                 class="gallery-quality__image"
               />
               <div class="gallery-quality__caption">
-                <span class="gallery-quality__label">
+                <span class="gallery-quality__label" data-i18n="philosophy.gallery3_label">
                   Handcrafted Avocado Oil Dough
                 </span>
               </div>
@@ -979,10 +982,10 @@
           <div class="cta-quality__split">
             <div class="cta-quality__column--content cta-quality__column">
               <div class="cta-quality__content">
-                <h2 class="section-title cta-quality__title">
+                <h2 class="section-title cta-quality__title" data-i18n="philosophy.cta_title">
                   Experience Uncompromising Quality Delivered to Your Door
                 </h2>
-                <p class="cta-quality__text section-content">
+                <p class="cta-quality__text section-content" data-i18n="philosophy.cta_text">
                   Our pizzas are delivered fresh to your door: hot crust,
                   vibrant sauce, perfectly melted cheese, and crisp microgreens
                   packaged separately in compostable cups. Order now via Uber
@@ -994,7 +997,7 @@
                     href="https://www.ubereats.com/ca?msockid=1298bc78b6d86c021899a903b7b56de6"
                     target="_blank"
                     rel="noreferrer noopener"
-                    class="philosophy-thq-btn-elm1 cta-quality__button btn-accent btn btn-lg"
+                    class="philosophy-thq-btn-elm1 cta-quality__button btn-accent btn btn-lg" data-i18n="philosophy.cta_ubereats"
                   >
                     Order on Uber Eats
                   </a>
@@ -1002,7 +1005,7 @@
                     href="https://www.doordash.com/?msockid=1298bc78b6d86c021899a903b7b56de6"
                     target="_blank"
                     rel="noreferrer noopener"
-                    class="philosophy-thq-btn-elm2 cta-quality__button btn-secondary btn btn-lg"
+                    class="philosophy-thq-btn-elm2 cta-quality__button btn-secondary btn btn-lg" data-i18n="philosophy.cta_doordash"
                   >
                     Order on DoorDash
                   </a>
@@ -1027,7 +1030,7 @@
                       <path d="m9 12l2 2l4-4"></path>
                     </g>
                   </svg>
-                  <span>
+                  <span data-i18n="philosophy.cta_guarantee">
                     Microgreens Packaged Separately. Compostable Materials.
                   </span>
                 </div>
@@ -1047,7 +1050,7 @@
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4a4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3M4 9a5 5 0 0 1 8 4a5 5 0 0 1-8-4m1 12h14"
+                    d="M14 9.536V7a4 4 0 0 1 4-4h1.5a .5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4a4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3M4 9a5 5 0 0 1 8 4a5 5 0 0 1-8-4m1 12h14"
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2"
@@ -1055,7 +1058,7 @@
                     stroke-linejoin="round"
                   ></path>
                 </svg>
-                <span>Signature Microgreen Finish</span>
+                <span data-i18n="philosophy.cta_badge">Signature Microgreen Finish</span>
               </div>
             </div>
           </div>
@@ -1108,28 +1111,35 @@
                       <div
                         class="footer-thq-footer-nav-link-elm1 footer-nav-link"
                       >
-                        <span>Homepage</span>
+                        <span data-i18n="footer.navHome">Homepage</span>
                       </div>
                     </a>
                     <a href="gourmet-pizza-menu.html">
                       <div
                         class="footer-thq-footer-nav-link-elm2 footer-nav-link"
                       >
-                        <span>Gourmet Pizza Menu</span>
+                        <span data-i18n="footer.navMenu">Gourmet Pizza Menu</span>
+                      </div>
+                    </a>
+                    <a href="philosophy.html">
+                      <div
+                        class="footer-thq-footer-nav-link-elm3 footer-nav-link"
+                      >
+                        <span data-i18n="footer.navPhilosophy">Our Philosophy</span>
                       </div>
                     </a>
                     <a href="about-us.html">
                       <div
-                        class="footer-thq-footer-nav-link-elm3 footer-nav-link"
+                        class="footer-thq-footer-nav-link-elm4 footer-nav-link"
                       >
-                        <span>About Us</span>
+                        <span data-i18n="footer.navAbout">About Us</span>
                       </div>
                     </a>
                     <a href="delivery-sustainability.html">
                       <div
-                        class="footer-thq-footer-nav-link-elm4 footer-nav-link"
+                        class="footer-thq-footer-nav-link-elm5 footer-nav-link"
                       >
-                        <span>Delivery &amp; Sustainability</span>
+                        <span data-i18n="footer.navDelivery">Delivery &amp; Sustainability</span>
                       </div>
                     </a>
                   </nav>
@@ -1302,5 +1312,27 @@
       defer=""
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
     ></script>
+    <script src="./js/i18n.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const languageButtons = document.querySelectorAll('.language-switcher-btn');
+        languageButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            i18n.setLanguage(lang);
+            languageButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+          });
+        });
+
+        // Set initial active button
+        const currentLang = i18n.getCurrentLanguage();
+        languageButtons.forEach(btn => {
+          if (btn.getAttribute('data-lang') === currentLang) {
+            btn.classList.add('active');
+          }
+        });
+      });
+    </script>
   </body>
 </html>

@@ -68,6 +68,7 @@
   </head>
   <body>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./language-switcher.css" />
     <div>
       <link href="./delivery-sustainability.css" rel="stylesheet" />
 
@@ -133,7 +134,7 @@
                     >
                       <div>
                         <div class="thq-navigation-link-elm1 navigation-link">
-                          <span>Homepage</span>
+                          <span data-i18n="nav.homepage">Homepage</span>
                         </div>
                       </div>
                     </li>
@@ -144,7 +145,7 @@
                     >
                       <div>
                         <div class="thq-navigation-link-elm2 navigation-link">
-                          <span>Gourmet Pizza Menu</span>
+                          <span data-i18n="nav.menu">Gourmet Pizza Menu</span>
                         </div>
                       </div>
                     </li>
@@ -155,7 +156,7 @@
                     >
                       <div>
                         <div class="thq-navigation-link-elm2 navigation-link">
-                          <span>Our Philosophy</span>
+                          <span data-i18n="nav.philosophy">Our Philosophy</span>
                         </div>
                       </div>
                     </li>
@@ -166,7 +167,7 @@
                     >
                       <div>
                         <div class="thq-navigation-link-elm3 navigation-link">
-                          <span>About Us</span>
+                          <span data-i18n="nav.about">About Us</span>
                         </div>
                       </div>
                     </li>
@@ -177,7 +178,7 @@
                     >
                       <div>
                         <div class="navigation-link thq-navigation-link-elm4">
-                          <span>Delivery &amp; Sustainability</span>
+                          <span data-i18n="nav.delivery">Delivery &amp; Sustainability</span>
                         </div>
                       </div>
                     </li>
@@ -205,6 +206,10 @@
                     ></path>
                   </svg>
                 </button>
+                <div class="language-switcher">
+                  <button class="language-switcher-btn" data-lang="en">EN</button>
+                  <button class="language-switcher-btn" data-lang="fr">FR</button>
+                </div>
               </div>
               <div class="navigation-overlay">
                 <div class="navigation-overlay-header">
@@ -250,7 +255,7 @@
                     <a href="index.html">
                       <div>
                         <div class="navigation-overlay-link">
-                          <span>Homepage</span>
+                          <span data-i18n="nav.homepage">Homepage</span>
                         </div>
                       </div>
                     </a>
@@ -262,7 +267,7 @@
                     <a href="gourmet-pizza-menu.html">
                       <div>
                         <div class="navigation-overlay-link">
-                          <span>Gourmet Pizza Menu</span>
+                          <span data-i18n="nav.menu">Gourmet Pizza Menu</span>
                         </div>
                       </div>
                     </a>
@@ -272,7 +277,7 @@
                       <div>
                         <div>
                           <div class="navigation-overlay-link">
-                            <span>Our Philosophy</span>
+                            <span data-i18n="nav.philosophy">Our Philosophy</span>
                           </div>
                         </div>
                       </div>
@@ -282,7 +287,7 @@
                     <a href="about-us.html">
                       <div>
                         <div class="navigation-overlay-link">
-                          <span>About Us</span>
+                          <span data-i18n="nav.about">About Us</span>
                         </div>
                       </div>
                     </a>
@@ -294,7 +299,7 @@
                     <a href="delivery-sustainability.html">
                       <div>
                         <div class="navigation-overlay-link">
-                          <span>Delivery &amp; Sustainability</span>
+                          <span data-i18n="nav.delivery">Delivery &amp; Sustainability</span>
                         </div>
                       </div>
                     </a>
@@ -382,11 +387,12 @@
               <div class="hero-overlay"></div>
               <div class="hero-content-wrapper">
                 <div class="delivery---sustainability-hero-content">
-                  <h1 class="hero-title delivery---sustainability-hero-title">
+                  <h1 class="hero-title delivery---sustainability-hero-title" data-i18n="delivery_page.hero_slide1_title">
                     Gourmet Pizza, Delivered to Perfection
                   </h1>
                   <p
                     class="delivery---sustainability-hero-subtitle hero-subtitle"
+                    data-i18n="delivery_page.hero_slide1_subtitle"
                   >
                     Uncompromising quality from our kitchen to your door.
                     Experience the freshness of microgreen-finished artisan
@@ -398,6 +404,7 @@
                       target="_blank"
                       rel="noreferrer noopener"
                       class="delivery-sustainability-thq-btn-elm1 btn-primary btn btn-lg"
+                      data-i18n="delivery_page.hero_slide1_btn"
                     >
                       Order on Uber Eats
                     </a>
@@ -406,6 +413,7 @@
                       target="_blank"
                       rel="noreferrer noopener"
                       class="delivery-sustainability-thq-btn-elm2 btn btn-outline btn-lg"
+                      data-i18n="delivery_page.hero_slide1_btn"
                     >
                       Order on DoorDash
                     </a>
@@ -420,17 +428,18 @@
               <div class="hero-overlay"></div>
               <div class="hero-content-wrapper">
                 <div class="delivery---sustainability-hero-content">
-                  <h1 class="hero-title delivery---sustainability-hero-title">
+                  <h1 class="hero-title delivery---sustainability-hero-title" data-i18n="delivery_page.hero_slide2_title">
                     Freshness Guaranteed in Every Bite
                   </h1>
                   <p
                     class="delivery---sustainability-hero-subtitle hero-subtitle"
+                    data-i18n="delivery_page.hero_slide2_subtitle"
                   >
                     Our signature microgreens arrive in compostable cups,
                     ensuring crisp, vibrant garnishes that elevate every slice.
                   </p>
                   <div class="hero-buttons">
-                    <button class="btn-secondary btn btn-lg">
+                    <button class="btn-secondary btn btn-lg" data-i18n="delivery_page.hero_slide2_btn">
                       Explore Our Menu
                     </button>
                   </div>
@@ -444,17 +453,18 @@
               <div class="hero-overlay"></div>
               <div class="hero-content-wrapper">
                 <div class="delivery---sustainability-hero-content">
-                  <h1 class="hero-title delivery---sustainability-hero-title">
+                  <h1 class="hero-title delivery---sustainability-hero-title" data-i18n="delivery_page.hero_slide3_title">
                     Seamless Delivery, Sustainable Practices
                   </h1>
                   <p
                     class="delivery---sustainability-hero-subtitle hero-subtitle"
+                    data-i18n="delivery_page.hero_slide3_subtitle"
                   >
                     Chef-perfected pizzas delivered with eco-friendly packaging.
                     Taste the difference of delivery-first gourmet cuisine.
                   </p>
                   <div class="hero-buttons">
-                    <button class="btn-accent btn btn-lg">Learn More</button>
+                    <button class="btn-accent btn btn-lg" data-i18n="delivery_page.hero_slide3_btn">Learn More</button>
                   </div>
                 </div>
               </div>
@@ -463,8 +473,8 @@
         </div>
         <section class="delivery-process-section">
           <div class="delivery-process-header">
-            <h2 class="section-title">From Kitchen to Your Doorstep</h2>
-            <p class="section-subtitle">
+            <h2 class="section-title" data-i18n="delivery_page.process_title">From Kitchen to Your Doorstep</h2>
+            <p class="section-subtitle" data-i18n="delivery_page.process_subtitle">
               Our seamless delivery process ensures every pizza arrives fresh,
               hot, and perfectly garnished with our signature microgreens.
             </p>
@@ -494,10 +504,10 @@
                   </svg>
                 </div>
                 <div class="delivery-sustainability-container4">
-                  <h3 class="delivery-accordion-title">
+                  <h3 class="delivery-accordion-title" data-i18n="delivery_page.process_step1_title">
                     Chef-Perfected Preparation
                   </h3>
-                  <p class="delivery-accordion-meta">Step 1</p>
+                  <p class="delivery-accordion-meta" data-i18n="delivery_page.process_step1_meta">Step 1</p>
                 </div>
               </summary>
               <div
@@ -520,7 +530,7 @@
                 ></path>
               </svg>
               <div class="delivery-accordion-content">
-                <p class="section-content">
+                <p class="section-content" data-i18n="delivery_page.process_step1_text">
                   Each pizza is handcrafted in our artisan kitchen using premium
                   avocado oil dough and authentic San Marzano tomato sauce. We
                   meticulously select and prepare every topping to ensure
@@ -554,10 +564,10 @@
                   </svg>
                 </div>
                 <div class="delivery-sustainability-container4">
-                  <h3 class="delivery-accordion-title">
+                  <h3 class="delivery-accordion-title" data-i18n="delivery_page.process_step2_title">
                     Eco-Friendly Packaging
                   </h3>
-                  <p class="delivery-accordion-meta">Step 2</p>
+                  <p class="delivery-accordion-meta" data-i18n="delivery_page.process_step2_meta">Step 2</p>
                 </div>
               </summary>
               <div
@@ -580,7 +590,7 @@
                 ></path>
               </svg>
               <div class="delivery-accordion-content">
-                <p class="section-content">
+                <p class="section-content" data-i18n="delivery_page.process_step2_text">
                   Your hot pizza is carefully placed in premium delivery boxes,
                   while our signature GMO-free, pesticide-free microgreens are
                   sealed in clear 7 oz compostable clamshell containers. This innovative
@@ -617,8 +627,8 @@
                   </svg>
                 </div>
                 <div class="delivery-sustainability-container4">
-                  <h3 class="delivery-accordion-title">Real-Time Tracking</h3>
-                  <p class="delivery-accordion-meta">Step 3</p>
+                  <h3 class="delivery-accordion-title" data-i18n="delivery_page.process_step3_title">Real-Time Tracking</h3>
+                  <p class="delivery-accordion-meta" data-i18n="delivery_page.process_step3_meta">Step 3</p>
                 </div>
               </summary>
               <div
@@ -641,7 +651,7 @@
                 ></path>
               </svg>
               <div class="delivery-accordion-content">
-                <p class="section-content">
+                <p class="section-content" data-i18n="delivery_page.process_step3_text">
                   Track your order in real-time through Uber Eats or DoorDash.
                   From the moment your pizza enters the oven to arrival at your
                   door, you'll know exactly when to expect your gourmet meal.
@@ -735,10 +745,10 @@
                   </svg>
                 </div>
                 <div class="delivery-sustainability-container4">
-                  <h3 class="delivery-accordion-title">
+                  <h3 class="delivery-accordion-title" data-i18n="delivery_page.process_step4_title">
                     Arrival &amp; Final Touch
                   </h3>
-                  <p class="delivery-accordion-meta">Step 4</p>
+                  <p class="delivery-accordion-meta" data-i18n="delivery_page.process_step4_meta">Step 4</p>
                 </div>
               </summary>
               <div
@@ -761,7 +771,7 @@
                 ></path>
               </svg>
               <div class="delivery-accordion-content">
-                <p class="section-content">
+                <p class="section-content" data-i18n="delivery_page.process_step4_text">
                   Your pizza arrives hot and ready. Simply scatter the vibrant
                   microgreens from the compostable cup over your pizza for that
                   final chef's touch. Experience the explosive freshness that
@@ -780,8 +790,8 @@
         <section class="sustainability-section">
           <div class="sustainability-container">
             <div class="sustainability-header">
-              <h2 class="section-title">Our Commitment to Sustainability</h2>
-              <p class="section-subtitle">
+              <h2 class="section-title" data-i18n="delivery_page.sustainability_title">Our Commitment to Sustainability</h2>
+              <p class="section-subtitle" data-i18n="delivery_page.sustainability_subtitle">
                 Every element of our packaging is designed with the planet in
                 mind, from compostable cups to eco-friendly materials.
               </p>
@@ -824,10 +834,10 @@
                       </div>
                     </div>
                     <div class="sustainability-card-content">
-                      <h3 class="sustainability-card-title">
-                        Compostable Microgreen Cups
+                      <h3 class="sustainability-card-title" data-i18n="delivery_page.sustainability_card1_title">
+                        Compostable Packaging
                       </h3>
-                      <p class="section-content">
+                      <p class="section-content" data-i18n="delivery_page.sustainability_card1_text">
                         Our clear 7 oz clamshell containers are 100% compostable,
                         breaking down naturally without harming the environment.
                         They keep your microgreens fresh while reducing plastic
@@ -909,10 +919,10 @@
                       </div>
                     </div>
                     <div class="sustainability-card-content">
-                      <h3 class="sustainability-card-title">
-                        Recycled Delivery Boxes
+                      <h3 class="sustainability-card-title" data-i18n="delivery_page.sustainability_card2_title">
+                        Responsible Sourcing
                       </h3>
-                      <p class="section-content">
+                      <p class="section-content" data-i18n="delivery_page.sustainability_card2_text">
                         Our pizza boxes are made from 100% recycled cardboard
                         and are fully recyclable. Heat-resistant and
                         grease-proof without harmful chemicals.
@@ -985,10 +995,10 @@
                       </div>
                     </div>
                     <div class="sustainability-card-content">
-                      <h3 class="sustainability-card-title">
-                        Zero-Plastic Commitment
+                      <h3 class="sustainability-card-title" data-i18n="delivery_page.sustainability_card3_title">
+                        Zero-Waste Approach
                       </h3>
-                      <p class="section-content">
+                      <p class="section-content" data-i18n="delivery_page.sustainability_card3_text">
                         We've eliminated single-use plastics from our entire
                         operation. Every utensil, napkin, and container is
                         either compostable or recyclable.
@@ -1063,10 +1073,10 @@
                       </div>
                     </div>
                     <div class="sustainability-card-content">
-                      <h3 class="sustainability-card-title">
-                        Local &amp; Ethical Sourcing
+                      <h3 class="sustainability-card-title" data-i18n="delivery_page.sustainability_card4_title">
+                        Efficient Delivery
                       </h3>
-                      <p class="section-content">
+                      <p class="section-content" data-i18n="delivery_page.sustainability_card4_text">
                         We partner with local farms for our microgreens and
                         prioritize suppliers who share our commitment to
                         sustainable, ethical practices.
@@ -1120,8 +1130,8 @@
         </section>
         <section class="microgreens-section">
           <div class="microgreens-header">
-            <h2 class="section-title">The Microgreen Difference</h2>
-            <p class="section-subtitle">
+            <h2 class="section-title" data-i18n="delivery_page.microgreens_title">The Microgreen Difference</h2>
+            <p class="section-subtitle" data-i18n="delivery_page.microgreens_subtitle">
               GMO-free, pesticide-free microgreens that transform every pizza
               into a gourmet experience, delivered fresh and vibrant.
             </p>
@@ -1145,8 +1155,8 @@
                   ></path>
                 </svg>
               </div>
-              <h3 class="microgreens-card-title">Hyper-Fresh Garnish</h3>
-              <p class="section-content">
+              <h3 class="microgreens-card-title" data-i18n="delivery_page.microgreens_card1_title">Hyper-Fresh Living Greens</h3>
+              <p class="section-content" data-i18n="delivery_page.microgreens_card1_text">
                 Our microgreens are harvested at peak freshness and packaged
                 immediately. The result is explosive flavor and vibrant color
                 that elevates every bite.
@@ -1201,8 +1211,8 @@
                   </g>
                 </svg>
               </div>
-              <h3 class="microgreens-card-title">Pesticide-Free Growth</h3>
-              <p class="section-content">
+              <h3 class="microgreens-card-title" data-i18n="delivery_page.microgreens_card2_title">GMO-Free & Pesticide-Free</h3>
+              <p class="section-content" data-i18n="delivery_page.microgreens_card2_text">
                 Grown without synthetic pesticides or chemicals, our microgreens
                 are cultivated in controlled environments using organic
                 practices for the safest, cleanest greens.
@@ -1230,8 +1240,8 @@
                   </g>
                 </svg>
               </div>
-              <h3 class="microgreens-card-title">Crush-Proof Packaging</h3>
-              <p class="section-content">
+              <h3 class="microgreens-card-title" data-i18n="delivery_page.microgreens_card3_title">Intentionally Balanced Flavor</h3>
+              <p class="section-content" data-i18n="delivery_page.microgreens_card3_text">
                 Our innovative 7 oz compostable clamshell containers protect your microgreens
                 during transit. They arrive crisp, dry, and ready to scatter for
                 that perfect finishing touch.
@@ -1280,8 +1290,8 @@
                   ></path>
                 </svg>
               </div>
-              <h3 class="microgreens-card-title">Chef-Curated Pairings</h3>
-              <p class="section-content">
+              <h3 class="microgreens-card-title" data-i18n="delivery_page.microgreens_card4_title">Nutritional Powerhouses</h3>
+              <p class="section-content" data-i18n="delivery_page.microgreens_card4_text">
                 Each pizza features a specifically chosen microgreen variety
                 that balances and enhances its unique flavor profile. From
                 peppery radish to earthy broccoli microgreens, every pairing is
@@ -1292,8 +1302,8 @@
         </section>
         <section class="menu-philosophy-section">
           <div class="menu-philosophy-header">
-            <h2 class="section-title">Why No Customization?</h2>
-            <p class="section-subtitle">
+            <h2 class="section-title" data-i18n="delivery_page.philosophy_title">Why No Customization?</h2>
+            <p class="section-subtitle" data-i18n="delivery_page.philosophy_subtitle">
               Our curated menu of seven chef-driven pizzas represents years of
               culinary refinement. Every ingredient, every ratio, every topping
               is perfectly balanced for the ultimate gourmet experience.
@@ -1304,8 +1314,8 @@
               <div class="menu-timeline-marker"></div>
               <div class="menu-timeline-content">
                 <div class="menu-timeline-number"><span>01</span></div>
-                <h3 class="menu-timeline-title">Perfected Flavor Balance</h3>
-                <p class="section-content">
+                <h3 class="menu-timeline-title" data-i18n="delivery_page.philosophy_item1_title">Chef-Driven Excellence</h3>
+                <p class="section-content" data-i18n="delivery_page.philosophy_item1_text">
                   Each pizza is the result of countless hours of testing and
                   refinement. Our chefs have calibrated every element to create
                   harmonious flavor profiles that can't be improved by
@@ -1324,8 +1334,8 @@
               <div class="menu-timeline-marker"></div>
               <div class="menu-timeline-content">
                 <div class="menu-timeline-number"><span>02</span></div>
-                <h3 class="menu-timeline-title">Consistent Excellence</h3>
-                <p class="section-content">
+                <h3 class="menu-timeline-title" data-i18n="delivery_page.philosophy_item2_title">Ingredient Synergy</h3>
+                <p class="section-content" data-i18n="delivery_page.philosophy_item2_text">
                   By eliminating customization, we ensure every pizza meets our
                   exact standards every time. You'll never experience a poorly
                   executed order or unbalanced toppings.
@@ -1343,8 +1353,8 @@
               <div class="menu-timeline-marker"></div>
               <div class="menu-timeline-content">
                 <div class="menu-timeline-number"><span>03</span></div>
-                <h3 class="menu-timeline-title">Speed &amp; Efficiency</h3>
-                <p class="section-content">
+                <h3 class="menu-timeline-title" data-i18n="delivery_page.philosophy_item3_title">Quality Assurance</h3>
+                <p class="section-content" data-i18n="delivery_page.philosophy_item3_text">
                   Without the complexity of customization, our kitchen operates
                   with precision and speed. Your order is prepared faster,
                   delivered hotter, and arrives exactly as the chef intended.
@@ -1362,8 +1372,8 @@
               <div class="menu-timeline-marker"></div>
               <div class="menu-timeline-content">
                 <div class="menu-timeline-number"><span>04</span></div>
-                <h3 class="menu-timeline-title">Ingredient Integrity</h3>
-                <p class="section-content">
+                <h3 class="menu-timeline-title" data-i18n="delivery_page.philosophy_item4_title">Delivery Excellence</h3>
+                <p class="section-content" data-i18n="delivery_page.philosophy_item4_text">
                   Each ingredient is chosen for its specific role in the pizza's
                   flavor architecture. From authentic San Marzano tomatoes to
                   premium avocado oil dough, nothing is arbitrary.
@@ -1422,8 +1432,8 @@
         <section class="gallery-section">
           <div class="gallery-container">
             <div class="gallery-header">
-              <h2 class="section-title">Signature Pizza Gallery</h2>
-              <p class="section-subtitle">
+              <h2 class="section-title" data-i18n="delivery_page.gallery_title">Signature Pizza Gallery</h2>
+              <p class="section-subtitle" data-i18n="delivery_page.gallery_subtitle">
                 Experience the visual artistry of our chef-perfected pizzas and
                 vibrant microgreen finishes.
               </p>
@@ -1684,28 +1694,35 @@
                       <div
                         class="footer-thq-footer-nav-link-elm1 footer-nav-link"
                       >
-                        <span>Homepage</span>
+                        <span data-i18n="footer.navHome">Homepage</span>
                       </div>
                     </a>
                     <a href="gourmet-pizza-menu.html">
                       <div
                         class="footer-thq-footer-nav-link-elm2 footer-nav-link"
                       >
-                        <span>Gourmet Pizza Menu</span>
+                        <span data-i18n="footer.navMenu">Gourmet Pizza Menu</span>
+                      </div>
+                    </a>
+                    <a href="philosophy.html">
+                      <div
+                        class="footer-thq-footer-nav-link-elm3 footer-nav-link"
+                      >
+                        <span data-i18n="footer.navPhilosophy">Our Philosophy</span>
                       </div>
                     </a>
                     <a href="about-us.html">
                       <div
-                        class="footer-thq-footer-nav-link-elm3 footer-nav-link"
+                        class="footer-thq-footer-nav-link-elm4 footer-nav-link"
                       >
-                        <span>About Us</span>
+                        <span data-i18n="footer.navAbout">About Us</span>
                       </div>
                     </a>
                     <a href="delivery-sustainability.html">
                       <div
-                        class="footer-thq-footer-nav-link-elm4 footer-nav-link"
+                        class="footer-thq-footer-nav-link-elm5 footer-nav-link"
                       >
-                        <span>Delivery &amp; Sustainability</span>
+                        <span data-i18n="footer.navDelivery">Delivery &amp; Sustainability</span>
                       </div>
                     </a>
                   </nav>
@@ -1878,5 +1895,24 @@
       defer=""
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
     ></script>
+    <script src="./js/i18n.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const enBtn = document.querySelector('[data-lang="en"]');
+        const frBtn = document.querySelector('[data-lang="fr"]');
+        
+        if (enBtn) {
+          enBtn.addEventListener('click', function() {
+            i18n.setLanguage('en');
+          });
+        }
+        
+        if (frBtn) {
+          frBtn.addEventListener('click', function() {
+            i18n.setLanguage('fr');
+          });
+        }
+      });
+    </script>
   </body>
 </html>

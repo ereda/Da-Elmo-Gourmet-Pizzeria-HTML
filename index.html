@@ -62,6 +62,7 @@
       rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
+    <link rel="stylesheet" href="./language-switcher.css" />
   </head>
   <body>
     <link rel="stylesheet" href="./style.css" />
@@ -117,7 +118,7 @@
                       >
                         <div class="nav-logo-brand"><span>Da Elmo</span></div>
                         <div class="nav-logo-descriptor">
-                          <span>Gourmet Pizzeria</span>
+                          <span data-i18n="common.tagline">Gourmet Pizzeria</span>
                         </div>
                       </div>
                     </div>
@@ -130,7 +131,7 @@
                     >
                       <div>
                         <div class="thq-navigation-link-elm1 navigation-link">
-                          <span>Homepage</span>
+                          <span data-i18n="nav.homepage">Homepage</span>
                         </div>
                       </div>
                     </li>
@@ -141,7 +142,7 @@
                     >
                       <div>
                         <div class="thq-navigation-link-elm2 navigation-link">
-                          <span>Gourmet Pizza Menu</span>
+                          <span data-i18n="nav.menu">Gourmet Pizza Menu</span>
                         </div>
                       </div>
                     </li>
@@ -152,7 +153,7 @@
                     >
                       <div>
                         <div class="thq-navigation-link-elm2 navigation-link">
-                          <span>Our Philosophy</span>
+                          <span data-i18n="nav.philosophy">Our Philosophy</span>
                         </div>
                       </div>
                     </li>
@@ -163,7 +164,7 @@
                     >
                       <div>
                         <div class="thq-navigation-link-elm3 navigation-link">
-                          <span>About Us</span>
+                          <span data-i18n="nav.about">About Us</span>
                         </div>
                       </div>
                     </li>
@@ -174,7 +175,7 @@
                     >
                       <div>
                         <div class="navigation-link thq-navigation-link-elm4">
-                          <span>Delivery &amp; Sustainability</span>
+                          <span data-i18n="nav.delivery">Delivery &amp; Sustainability</span>
                         </div>
                       </div>
                     </li>
@@ -202,6 +203,10 @@
                     ></path>
                   </svg>
                 </button>
+                <div class="language-switcher" id="language-switcher">
+                  <button class="language-switcher-btn active" data-lang="en">EN</button>
+                  <button class="language-switcher-btn" data-lang="fr">FR</button>
+                </div>
               </div>
               <div class="navigation-overlay">
                 <div class="navigation-overlay-header">
@@ -247,7 +252,7 @@
                     <a href="index.html">
                       <div>
                         <div class="navigation-overlay-link">
-                          <span>Homepage</span>
+                          <span data-i18n="nav.homepage">Homepage</span>
                         </div>
                       </div>
                     </a>
@@ -259,7 +264,7 @@
                     <a href="gourmet-pizza-menu.html">
                       <div>
                         <div class="navigation-overlay-link">
-                          <span>Gourmet Pizza Menu</span>
+                          <span data-i18n="nav.menu">Gourmet Pizza Menu</span>
                         </div>
                       </div>
                     </a>
@@ -269,7 +274,7 @@
                       <div>
                         <div>
                           <div class="navigation-overlay-link">
-                            <span>Our Philosophy</span>
+                            <span data-i18n="nav.philosophy">Our Philosophy</span>
                           </div>
                         </div>
                       </div>
@@ -279,7 +284,7 @@
                     <a href="about-us.html">
                       <div>
                         <div class="navigation-overlay-link">
-                          <span>About Us</span>
+                          <span data-i18n="nav.about">About Us</span>
                         </div>
                       </div>
                     </a>
@@ -291,7 +296,7 @@
                     <a href="delivery-sustainability.html">
                       <div>
                         <div class="navigation-overlay-link">
-                          <span>Delivery &amp; Sustainability</span>
+                          <span data-i18n="nav.delivery">Delivery &amp; Sustainability</span>
                         </div>
                       </div>
                     </a>
@@ -361,7 +366,7 @@
             <div class="hero-main-background">
               <img
                 alt="Gourmet pizza topped with fresh microgreens"
-                src="https://images.pexels.com/photos/6147981/pexels-photo-6147981.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
+                src="public/marinara3.jpg"
                 class="hero-main-image"
               />
               <div class="hero-main-overlay"></div>
@@ -393,10 +398,10 @@
                     </svg>
                     <span>Microgreen-Finished</span>
                   </div>
-                  <h1 class="home-hero-title hero-title">
+                  <h1 class="home-hero-title hero-title" data-i18n="home.title">
                     Gourmet Pizza, Delivered.
                   </h1>
-                  <p class="home-hero-subtitle hero-subtitle">
+                  <p class="home-hero-subtitle hero-subtitle" data-i18n="home.subtitle">
                     Chef-perfected artisan pizzas with our signature microgreen
                     finish. Uncompromising quality delivered straight to your
                     door via Uber Eats and DoorDash.
@@ -408,7 +413,7 @@
                       rel="noreferrer noopener"
                       class="home-thq-btn-elm1 btn-primary btn btn-lg"
                     >
-                      Order on Uber Eats
+                      <span data-i18n="home.orderUberEats">Order on Uber Eats</span>
                     </a>
                     <a
                       href="https://www.doordash.com/?msockid=1298bc78b6d86c021899a903b7b56de6"
@@ -416,7 +421,7 @@
                       rel="noreferrer noopener"
                       class="home-thq-btn-elm2 btn-secondary btn btn-lg"
                     >
-                      Order on DoorDash
+                      <span data-i18n="home.orderDoorDash">Order on DoorDash</span>
                     </a>
                   </div>
                 </div>
@@ -437,10 +442,10 @@
                         stroke-linejoin="round"
                       ></path>
                     </svg>
-                    <h3 class="hero-main-feature-title">
+                    <h3 class="hero-main-feature-title" data-i18n="home.feature1Title">
                       GMO-Free Microgreens
                     </h3>
-                    <p class="hero-main-feature-text">
+                    <p class="hero-main-feature-text" data-i18n="home.feature1Text">
                       Pesticide-free, hyper-fresh greens that elevate every bite
                     </p>
                   </div>
@@ -460,8 +465,8 @@
                         stroke-linejoin="round"
                       ></path>
                     </svg>
-                    <h3 class="hero-main-feature-title">Avocado Oil Dough</h3>
-                    <p class="hero-main-feature-text">
+                    <h3 class="hero-main-feature-title" data-i18n="home.feature2Title">Avocado Oil Dough</h3>
+                    <p class="hero-main-feature-text" data-i18n="home.feature2Text">
                       Premium handcrafted dough for unmatched flavor and texture
                     </p>
                   </div>
@@ -481,8 +486,8 @@
                         stroke-linejoin="round"
                       ></path>
                     </svg>
-                    <h3 class="hero-main-feature-title">Chef-Curated Menu</h3>
-                    <p class="hero-main-feature-text">
+                    <h3 class="hero-main-feature-title" data-i18n="home.feature3Title">Chef-Curated Menu</h3>
+                    <p class="hero-main-feature-text" data-i18n="home.feature3Text">
                       Seven distinct pizzas perfected in every detail, no
                       customization needed
                     </p>
@@ -509,8 +514,8 @@
                         ></path>
                       </g>
                     </svg>
-                    <h3 class="hero-main-feature-title">Delivery-Only</h3>
-                    <p class="hero-main-feature-text">
+                    <h3 class="hero-main-feature-title" data-i18n="home.feature4Title">Delivery-Only</h3>
+                    <p class="hero-main-feature-text" data-i18n="home.feature4Text">
                       Seamless delivery experience from our kitchen to your
                       table
                     </p>
@@ -533,8 +538,8 @@
             <div class="cta-delivery-overlay"></div>
             <div class="cta-delivery-content">
               <div class="cta-delivery-container">
-                <h2 class="section-title">Order Now, Delivered Fast</h2>
-                <p class="section-subtitle">
+                <h2 class="section-title" data-i18n="home.orderHeading">Order Now, Delivered Fast</h2>
+                <p class="section-subtitle" data-i18n="home.orderSubtitle">
                   Your gourmet pizza experience is just a tap away. Available
                   exclusively on Uber Eats and DoorDash for seamless, reliable
                   delivery.
@@ -545,7 +550,7 @@
                       <div class="cta-delivery-platform-logo">
                         <span>Uber Eats</span>
                       </div>
-                      <span class="cta-delivery-status">Available Now</span>
+                      <span class="cta-delivery-status" data-i18n="home.availableNow">Available Now</span>
                     </div>
                     <a
                       href="https://www.ubereats.com/ca?msockid=1298bc78b6d86c021899a903b7b56de6"
@@ -553,7 +558,7 @@
                       rel="noreferrer noopener"
                       class="home-thq-btn-elm3 btn-primary btn btn-xl"
                     >
-                      Start Your Order
+                      <span data-i18n="home.startOrder">Start Your Order</span>
                     </a>
                   </div>
                   <div class="cta-delivery-platform">
@@ -561,7 +566,7 @@
                       <div class="cta-delivery-platform-logo">
                         <span>DoorDash</span>
                       </div>
-                      <span class="cta-delivery-status">Available Now</span>
+                      <span class="cta-delivery-status" data-i18n="home.availableNow">Available Now</span>
                     </div>
                     <a
                       href="https://www.doordash.com/?msockid=1298bc78b6d86c021899a903b7b56de6"
@@ -569,7 +574,7 @@
                       rel="noreferrer noopener"
                       class="home-thq-btn-elm4 btn-accent btn btn-xl"
                     >
-                      Start Your Order
+                      <span data-i18n="home.startOrder">Start Your Order</span>
                     </a>
                   </div>
                 </div>
@@ -580,8 +585,8 @@
         <section class="gallery-menu">
           <div class="gallery-menu-wrapper">
             <div class="gallery-menu-header">
-              <h2 class="section-title">Seven Signature Pizzas</h2>
-              <p class="section-subtitle">
+              <h2 class="section-title" data-i18n="home.menuTitle">Seven Signature Pizzas</h2>
+              <p class="section-subtitle" data-i18n="home.menuSubtitle">
                 Each pizza is a chef-driven masterpiece, finished with our
                 signature microgreens for the perfect balance of flavor and
                 freshness.
@@ -620,8 +625,8 @@
                     </svg>
                     <span>Fresh Basil</span>
                   </div>
-                  <h3 class="gallery-menu-item-title">Pizza Tricolore</h3>
-                  <p class="gallery-menu-item-description">
+                  <h3 class="gallery-menu-item-title" data-i18n="pizza.tricoloreTitle">Pizza Tricolore</h3>
+                  <p class="gallery-menu-item-description" data-i18n="pizza.tricoloreDesc">
                     The perfect Italian classic featuring mozzarella, San
                     Marzano tomatoes, and fresh basil leaves. The three colours
                     of the Italian flag in pure form.
@@ -660,8 +665,8 @@
                     </svg>
                     <span>Radish Microgreens</span>
                   </div>
-                  <h3 class="gallery-menu-item-title">Pepperoni Rustico</h3>
-                  <p class="gallery-menu-item-description">
+                  <h3 class="gallery-menu-item-title" data-i18n="pizza.pepperoniTitle">Pepperoni Rustico</h3>
+                  <p class="gallery-menu-item-description" data-i18n="pizza.pepperoniDesc">
                     Bold and spicy with premium pepperoni, roasted peppers,
                     mushrooms, and hot honey. Balanced by sharp radish
                     microgreens.
@@ -700,8 +705,8 @@
                     </svg>
                     <span>Baby Arugula</span>
                   </div>
-                  <h3 class="gallery-menu-item-title">Verde Fresco</h3>
-                  <p class="gallery-menu-item-description">
+                  <h3 class="gallery-menu-item-title" data-i18n="pizza.verdeTitle">Verde Fresco</h3>
+                  <p class="gallery-menu-item-description" data-i18n="pizza.verdeDesc">
                     Our white pizza with garlic-herb oil, mozzarella, fresh
                     parsley,&nbsp;and lemon zest.
                   </p>
@@ -739,8 +744,8 @@
                     </svg>
                     <span>Baby Arugula</span>
                   </div>
-                  <h3 class="gallery-menu-item-title">Mediterranean Coast</h3>
-                  <p class="gallery-menu-item-description">
+                  <h3 class="gallery-menu-item-title" data-i18n="pizza.medCoastTitle">Mediterranean Coast</h3>
+                  <p class="gallery-menu-item-description" data-i18n="pizza.medCoastDesc">
                     Bright and tangy with feta, mixed olives, tomatoes, and red
                     pepper flakes. Baby arugula adds a peppery finish.
                   </p>
@@ -778,8 +783,8 @@
                     </svg>
                     <span>Fresh Basil</span>
                   </div>
-                  <h3 class="gallery-menu-item-title">Midnight Marinara</h3>
-                  <p class="gallery-menu-item-description">
+                  <h3 class="gallery-menu-item-title" data-i18n="pizza.midnightTitle">Midnight Marinara</h3>
+                  <p class="gallery-menu-item-description" data-i18n="pizza.midnightDesc">
                     San Marzano tomato sauce over a garlic-infused avocado oil
                     base, with savoury Parmigiano Reggiano and fresh basil.
                   </p>
@@ -817,8 +822,8 @@
                     </svg>
                     <span>Broccoli Microgreens</span>
                   </div>
-                  <h3 class="gallery-menu-item-title">Tuscan Gardener</h3>
-                  <p class="gallery-menu-item-description">
+                  <h3 class="gallery-menu-item-title" data-i18n="pizza.tuscanTitle">Tuscan Gardener</h3>
+                  <p class="gallery-menu-item-description" data-i18n="pizza.tuscanDesc">
                     The ultimate vegetable-forward pizza with roasted broccoli,
                     cauliflower, peppers, and cremini mushrooms. Topped with
                     classic broccoli microgreens.
@@ -857,8 +862,8 @@
                     </svg>
                     <span>Radish Microgreens &amp; Basil</span>
                   </div>
-                  <h3 class="gallery-menu-item-title">Funghi e Cipolla</h3>
-                  <p class="gallery-menu-item-description">
+                  <h3 class="gallery-menu-item-title" data-i18n="pizza.funghi Title">Funghi e Cipolla</h3>
+                  <p class="gallery-menu-item-description" data-i18n="pizza.funghiDesc">
                     Classic Italian pairing of cremini mushrooms and red onion
                     with Parmigiano Reggiano. Double garnish of radish
                     microgreens and basil.
@@ -872,8 +877,8 @@
           <div class="about-quality-wrapper">
             <div class="about-quality-container">
               <div class="about-quality-header">
-                <h2 class="section-title">Uncompromising Quality</h2>
-                <p class="section-subtitle">
+                <h2 class="section-title" data-i18n="home.qualityTitle">Uncompromising Quality</h2>
+                <p class="section-subtitle" data-i18n="home.qualitySubtitle">
                   Every ingredient is chosen for its purity, flavor, and
                   integrity. Our philosophy is simple: perfection in every
                   detail, from dough to delivery.
@@ -900,10 +905,10 @@
                     </svg>
                   </div>
                   <div class="about-quality-timeline-content">
-                    <h3 class="about-quality-timeline-title">
+                    <h3 class="about-quality-timeline-title" data-i18n="quality.doughTitle">
                       Premium Avocado Oil Dough
                     </h3>
-                    <p class="about-quality-timeline-text">
+                    <p class="about-quality-timeline-text" data-i18n="quality.doughText">
                       Our signature dough is handcrafted using premium avocado
                       oil and high-quality flour. This unique combination
                       creates a foundation of unmatched flavor, texture, and
@@ -931,10 +936,10 @@
                     </svg>
                   </div>
                   <div class="about-quality-timeline-content">
-                    <h3 class="about-quality-timeline-title">
+                    <h3 class="about-quality-timeline-title" data-i18n="quality.tomatoTitle">
                       Authentic San Marzano Tomatoes
                     </h3>
-                    <p class="about-quality-timeline-text">
+                    <p class="about-quality-timeline-text" data-i18n="quality.tomatoText">
                       Our rich, vibrant sauce starts with authentic San
                       Marzano&nbsp;tomatoes, ensuring a true Italian base. These
                       prized tomatoes are&nbsp;grown in volcanic soil,
@@ -968,10 +973,10 @@
                     </svg>
                   </div>
                   <div class="about-quality-timeline-content">
-                    <h3 class="about-quality-timeline-title">
+                    <h3 class="about-quality-timeline-title" data-i18n="quality.microgreensTitle">
                       GMO-Free, Pesticide-Free Microgreens
                     </h3>
-                    <p class="about-quality-timeline-text">
+                    <p class="about-quality-timeline-text" data-i18n="quality.microgreensText">
                       Our hallmark is the final touch of hyper-fresh,
                       GMO-free,&nbsp;pesticide-free microgreens. Each variety is
                       intentionally chosen to balance and elevate its pizza,
@@ -999,10 +1004,10 @@
                     </svg>
                   </div>
                   <div class="about-quality-timeline-content">
-                    <h3 class="about-quality-timeline-title">
+                    <h3 class="about-quality-timeline-title" data-i18n="quality.menuTitle">
                       Chef-Curated, Non-Customizable Menu
                     </h3>
-                    <p class="about-quality-timeline-text">
+                    <p class="about-quality-timeline-text" data-i18n="quality.menuText">
                       <span></span>
                       <span>
                         We eliminate the complexity of customization to focus
@@ -1023,8 +1028,8 @@
           <div class="features-sustainability-wrapper">
             <div class="features-sustainability-container">
               <div class="features-sustainability-header">
-                <h2 class="section-title">Freshness &amp; Sustainability</h2>
-                <p class="section-subtitle">
+                <h2 class="section-title" data-i18n="home.sustainabilityTitle">Freshness &amp; Sustainability</h2>
+                <p class="section-subtitle" data-i18n="home.sustainabilitySubtitle">
                   Our commitment to quality extends beyond taste to
                   environmental responsibility and guaranteed freshness.
                 </p>
@@ -1062,10 +1067,10 @@
                       </div>
                     </div>
                     <div class="features-sustainability-card-content">
-                      <h3 class="features-sustainability-card-title">
+                      <h3 class="features-sustainability-card-title" data-i18n="features.compostableTitle">
                         Compostable Microgreen Cups
                       </h3>
-                      <p class="features-sustainability-card-text">
+                      <p class="features-sustainability-card-text" data-i18n="features.compostableText">
                         Your microgreens arrive in clear 7 oz compostable
                         clamshell containers, ensuring they stay crisp, dry, and
                         vibrant. Never crushed or wilted during transport,
@@ -1099,10 +1104,10 @@
                       </div>
                     </div>
                     <div class="features-sustainability-card-content">
-                      <h3 class="features-sustainability-card-title">
+                      <h3 class="features-sustainability-card-title" data-i18n="features.freshnessTitle">
                         Commitment to Freshness
                       </h3>
-                      <p class="features-sustainability-card-text">
+                      <p class="features-sustainability-card-text" data-i18n="features.freshnessText">
                         Every pizza is prepared with the freshest ingredients.
                         Our packaging system preserves the perfect temperature
                         and texture from our kitchen to your table,
@@ -1144,10 +1149,10 @@
                       </div>
                     </div>
                     <div class="features-sustainability-card-content">
-                      <h3 class="features-sustainability-card-title">
+                      <h3 class="features-sustainability-card-title" data-i18n="features.packagingTitle">
                         Sustainable Packaging
                       </h3>
-                      <p class="features-sustainability-card-text">
+                      <p class="features-sustainability-card-text" data-i18n="features.packagingText">
                         We're committed to environmental responsibility with
                         compostable and recyclable packaging materials. Our
                         portion cups and delivery containers are designed to
@@ -1187,10 +1192,10 @@
                       </div>
                     </div>
                     <div class="features-sustainability-card-content">
-                      <h3 class="features-sustainability-card-title">
+                      <h3 class="features-sustainability-card-title" data-i18n="features.deliveryTitle">
                         Seamless Delivery Process
                       </h3>
-                      <p class="features-sustainability-card-text">
+                      <p class="features-sustainability-card-text" data-i18n="features.deliveryText">
                         We manage the entire delivery experience through trusted
                         partners Uber Eats and DoorDash. Fast, reliable, and
                         tracked in real-time, your gourmet pizza arrives exactly
@@ -1206,8 +1211,8 @@
         <section class="testimonials-reviews">
           <div class="testimonials-reviews-wrapper">
             <div class="testimonials-reviews-header">
-              <h2 class="section-title">What Our Customers Say</h2>
-              <p class="section-subtitle">
+              <h2 class="section-title" data-i18n="home.testimonialTitle">What Our Customers Say</h2>
+              <p class="section-subtitle" data-i18n="home.testimonialSubtitle">
                 Real experiences from pizza lovers who've discovered the Da Elmo
                 Gourmet difference.
               </p>
@@ -1288,17 +1293,17 @@
                       ></path>
                     </svg>
                   </div>
-                  <p class="testimonials-reviews-card-quote">
+                  <p class="testimonials-reviews-card-quote" data-i18n="testimonials.quote1">
                     The microgreen finish is absolutely genius! I've never
                     tasted pizza&nbsp;this fresh and sophisticated delivered to
                     my door. The Pizza&nbsp;Tricolore is perfection.
                   </p>
                   <div class="testimonials-reviews-card-author">
                     <div class="testimonials-reviews-card-author-info">
-                      <h4 class="testimonials-reviews-card-author-name">
+                      <h4 class="testimonials-reviews-card-author-name" data-i18n="testimonials.author1">
                         Sarah Mitchell
                       </h4>
-                      <p class="testimonials-reviews-card-author-location">
+                      <p class="testimonials-reviews-card-author-location" data-i18n="testimonials.location1">
                         Laval, Canada
                       </p>
                     </div>
@@ -1378,7 +1383,7 @@
                       ></path>
                     </svg>
                   </div>
-                  <p class="testimonials-reviews-card-quote">
+                  <p class="testimonials-reviews-card-quote" data-i18n="testimonials.quote2">
                     Fast delivery and incredible quality. The compostable cups
                     for the greens show they really care about sustainability.
                     The Pepperoni Rustico with radish microgreens is my new
@@ -1386,10 +1391,10 @@
                   </p>
                   <div class="testimonials-reviews-card-author">
                     <div class="testimonials-reviews-card-author-info">
-                      <h4 class="testimonials-reviews-card-author-name">
+                      <h4 class="testimonials-reviews-card-author-name" data-i18n="testimonials.author2">
                         Marcus Chen
                       </h4>
-                      <p class="testimonials-reviews-card-author-location">
+                      <p class="testimonials-reviews-card-author-location" data-i18n="testimonials.location2">
                         Montreal, Canada
                       </p>
                     </div>
@@ -1469,7 +1474,7 @@
                       ></path>
                     </svg>
                   </div>
-                  <p class="testimonials-reviews-card-quote">
+                  <p class="testimonials-reviews-card-quote" data-i18n="testimonials.quote3">
                     As someone who values quality ingredients, I'm blown away by
                     the avocado oil dough and San Marzano tomatoes. You can
                     taste the&nbsp;difference. The Midnight Marinara is
@@ -1477,10 +1482,10 @@
                   </p>
                   <div class="testimonials-reviews-card-author">
                     <div class="testimonials-reviews-card-author-info">
-                      <h4 class="testimonials-reviews-card-author-name">
+                      <h4 class="testimonials-reviews-card-author-name" data-i18n="testimonials.author3">
                         Elena Rodriguez
                       </h4>
-                      <p class="testimonials-reviews-card-author-location">
+                      <p class="testimonials-reviews-card-author-location" data-i18n="testimonials.location3">
                         Laval, Canada
                       </p>
                     </div>
@@ -1757,7 +1762,7 @@
                       src="public/elmo-pizzeria-transparent-200w.png"
                       class="footer-image"
                     />
-                    <p class="footer-tagline section-content">
+                    <p class="footer-tagline section-content" data-i18n="footer.tagline">
                       Gourmet Pizza, Delivered.
                     </p>
                   </div>
@@ -1768,28 +1773,35 @@
                       <div
                         class="footer-thq-footer-nav-link-elm1 footer-nav-link"
                       >
-                        <span>Homepage</span>
+                        <span data-i18n="footer.navHome">Homepage</span>
                       </div>
                     </a>
                     <a href="gourmet-pizza-menu.html">
                       <div
                         class="footer-thq-footer-nav-link-elm2 footer-nav-link"
                       >
-                        <span>Gourmet Pizza Menu</span>
+                        <span data-i18n="footer.navMenu">Gourmet Pizza Menu</span>
+                      </div>
+                    </a>
+                    <a href="philosophy.html">
+                      <div
+                        class="footer-thq-footer-nav-link-elm3 footer-nav-link"
+                      >
+                        <span data-i18n="footer.navPhilosophy">Our Philosophy</span>
                       </div>
                     </a>
                     <a href="about-us.html">
                       <div
-                        class="footer-thq-footer-nav-link-elm3 footer-nav-link"
+                        class="footer-thq-footer-nav-link-elm4 footer-nav-link"
                       >
-                        <span>About Us</span>
+                        <span data-i18n="footer.navAbout">About Us</span>
                       </div>
                     </a>
                     <a href="delivery-sustainability.html">
                       <div
-                        class="footer-thq-footer-nav-link-elm4 footer-nav-link"
+                        class="footer-thq-footer-nav-link-elm5 footer-nav-link"
                       >
-                        <span>Delivery &amp; Sustainability</span>
+                        <span data-i18n="footer.navDelivery">Delivery &amp; Sustainability</span>
                       </div>
                     </a>
                   </nav>
@@ -1819,7 +1831,7 @@
                           </g>
                         </svg>
                       </div>
-                      <span class="footer-contact-text section-content">
+                      <span class="footer-contact-text section-content" data-i18n="footer.address">
                         3954 Boulevard Leman, Laval
                       </span>
                     </div>
@@ -1854,14 +1866,14 @@
                       </div>
                       <a href="mailto:hello@daelmogourmetpizzeria.ca?subject=">
                         <div class="footer-contact-link section-content">
-                          <span>hello@daelmogourmetpizzeria.ca</span>
+                          <span data-i18n="footer.email">hello@daelmogourmetpizzeria.ca</span>
                         </div>
                       </a>
                     </div>
                   </div>
                 </div>
                 <div class="footer-delivery-section">
-                  <p class="footer-delivery-text section-content">
+                  <p class="footer-delivery-text section-content" data-i18n="footer.availableOn">
                     Available exclusively on
                   </p>
                   <div class="footer-delivery-badges">
@@ -1927,7 +1939,7 @@
                 </div>
                 <div class="footer-divider"></div>
                 <div class="footer-bottom-section">
-                  <p class="footer-legal-text section-content">
+                  <p class="footer-legal-text section-content" data-i18n="footer.copyright">
                     2025 Da Elmo Gourmet Pizzeria Inc. All rights reserved.
                   </p>
                   <div class="footer-legal-links">
@@ -1935,7 +1947,7 @@
                       <div
                         class="footer-thq-footer-legal-link-elm1 footer-legal-link"
                       >
-                        <span>Privacy Policy</span>
+                        <span data-i18n="footer.privacyPolicy">Privacy Policy</span>
                       </div>
                     </a>
                     <span class="footer-legal-separator">|</span>
@@ -1943,7 +1955,7 @@
                       <div
                         class="footer-thq-footer-legal-link-elm2 footer-legal-link"
                       >
-                        <span>Terms of Service</span>
+                        <span data-i18n="footer.termsOfService">Terms of Service</span>
                       </div>
                     </a>
                   </div>
@@ -1962,5 +1974,30 @@
       defer=""
       src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
     ></script>
+    <script src="./js/i18n.js"></script>
+    <script>
+      // Language switcher functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const langButtons = document.querySelectorAll('.language-switcher-btn');
+        langButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            const selectedLang = this.getAttribute('data-lang');
+            i18n.setLanguage(selectedLang);
+            
+            // Update active button
+            langButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+          });
+        });
+
+        // Set initial active button
+        const currentLang = i18n.getCurrentLanguage();
+        langButtons.forEach(btn => {
+          if (btn.getAttribute('data-lang') === currentLang) {
+            btn.classList.add('active');
+          }
+        });
+      });
+    </script>
   </body>
 </html>

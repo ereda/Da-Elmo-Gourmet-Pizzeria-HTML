@@ -65,9 +65,27 @@
       rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
+    <link rel="stylesheet" href="./language-switcher.css" />
   </head>
   <body>
     <link rel="stylesheet" href="./style.css" />
+    <script src="./js/i18n.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const i18n = new I18n();
+        i18n.init().then(() => {
+          const langButtons = document.querySelectorAll('.language-switcher-btn');
+          langButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+              const lang = btn.getAttribute('data-lang');
+              i18n.setLanguage(lang);
+              langButtons.forEach(b => b.classList.remove('active'));
+              btn.classList.add('active');
+            });
+          });
+        });
+      });
+    </script>
     <div>
       <link href="./gourmet-pizza-menu.css" rel="stylesheet" />
 
@@ -120,7 +138,7 @@
                       >
                         <div class="nav-logo-brand"><span>Da Elmo</span></div>
                         <div class="nav-logo-descriptor">
-                          <span>Gourmet Pizzeria</span>
+                          <span data-i18n="common.tagline">Gourmet Pizzeria</span>
                         </div>
                       </div>
                     </div>
@@ -133,7 +151,7 @@
                     >
                       <div>
                         <div class="thq-navigation-link-elm1 navigation-link">
-                          <span>Homepage</span>
+                          <span data-i18n="nav.homepage">Homepage</span>
                         </div>
                       </div>
                     </li>
@@ -144,7 +162,7 @@
                     >
                       <div>
                         <div class="thq-navigation-link-elm2 navigation-link">
-                          <span>Gourmet Pizza Menu</span>
+                          <span data-i18n="nav.menu">Gourmet Pizza Menu</span>
                         </div>
                       </div>
                     </li>
@@ -155,7 +173,7 @@
                     >
                       <div>
                         <div class="thq-navigation-link-elm2 navigation-link">
-                          <span>Our Philosophy</span>
+                          <span data-i18n="nav.philosophy">Our Philosophy</span>
                         </div>
                       </div>
                     </li>
@@ -166,7 +184,7 @@
                     >
                       <div>
                         <div class="thq-navigation-link-elm3 navigation-link">
-                          <span>About Us</span>
+                          <span data-i18n="nav.about">About Us</span>
                         </div>
                       </div>
                     </li>
@@ -177,7 +195,7 @@
                     >
                       <div>
                         <div class="navigation-link thq-navigation-link-elm4">
-                          <span>Delivery &amp; Sustainability</span>
+                          <span data-i18n="nav.delivery">Delivery &amp; Sustainability</span>
                         </div>
                       </div>
                     </li>
@@ -205,6 +223,10 @@
                     ></path>
                   </svg>
                 </button>
+                <div class="language-switcher" id="language-switcher">
+                  <button class="language-switcher-btn active" data-lang="en">EN</button>
+                  <button class="language-switcher-btn" data-lang="fr">FR</button>
+                </div>
               </div>
               <div class="navigation-overlay">
                 <div class="navigation-overlay-header">
@@ -250,7 +272,7 @@
                     <a href="index.html">
                       <div>
                         <div class="navigation-overlay-link">
-                          <span>Homepage</span>
+                          <span data-i18n="nav.homepage">Homepage</span>
                         </div>
                       </div>
                     </a>
@@ -262,7 +284,7 @@
                     <a href="gourmet-pizza-menu.html">
                       <div>
                         <div class="navigation-overlay-link">
-                          <span>Gourmet Pizza Menu</span>
+                          <span data-i18n="nav.menu">Gourmet Pizza Menu</span>
                         </div>
                       </div>
                     </a>
@@ -272,7 +294,7 @@
                       <div>
                         <div>
                           <div class="navigation-overlay-link">
-                            <span>Our Philosophy</span>
+                            <span data-i18n="nav.philosophy">Our Philosophy</span>
                           </div>
                         </div>
                       </div>
@@ -282,7 +304,7 @@
                     <a href="about-us.html">
                       <div>
                         <div class="navigation-overlay-link">
-                          <span>About Us</span>
+                          <span data-i18n="nav.about">About Us</span>
                         </div>
                       </div>
                     </a>
@@ -294,7 +316,7 @@
                     <a href="delivery-sustainability.html">
                       <div>
                         <div class="navigation-overlay-link">
-                          <span>Delivery &amp; Sustainability</span>
+                          <span data-i18n="nav.delivery">Delivery &amp; Sustainability</span>
                         </div>
                       </div>
                     </a>
@@ -369,11 +391,11 @@
                 <div class="hero-carousel__overlay"></div>
                 <div class="hero-carousel__content-container">
                   <div class="hero-carousel__content">
-                    <h1 class="hero-title">Gourmet Pizza, Delivered</h1>
-                    <p class="hero-subtitle">
+                    <h1 class="hero-title" data-i18n="pizzamenu.heroTitle">Gourmet Pizza, Delivered</h1>
+                    <p class="hero-subtitle" data-i18n="pizzamenu.heroSubtitle1">
                       Chef-Perfected, Microgreen-Finished
                     </p>
-                    <p class="hero-subtitle">
+                    <p class="hero-subtitle" data-i18n="pizzamenu.heroSubtitle2">
                       Experience delivery-first artisan pizza crafted with
                       premium&nbsp;avocado oil dough and finished with GMO-free
                       microgreens. Seven signature pizzas, exclusively via Uber
@@ -385,6 +407,7 @@
                         target="_blank"
                         rel="noreferrer noopener"
                         class="gourmet-pizza-menu-thq-btn-elm1 btn-primary btn btn-lg"
+                        data-i18n="pizzamenu.orderUberEats"
                       >
                         Order on Uber Eats
                       </a>
@@ -393,6 +416,7 @@
                         target="_blank"
                         rel="noreferrer noopener"
                         class="gourmet-pizza-menu-thq-btn-elm2 btn btn-outline btn-lg"
+                        data-i18n="pizzamenu.orderDoorDash"
                       >
                         Order on DoorDash
                       </a>
@@ -407,15 +431,15 @@
                 <div class="hero-carousel__overlay"></div>
                 <div class="hero-carousel__content-container">
                   <div class="hero-carousel__content">
-                    <h1 class="hero-title">Six Chef-Driven Pizzas</h1>
-                    <p class="hero-subtitle">Non-Customizable Perfection</p>
-                    <p class="section-content">
+                    <h1 class="hero-title" data-i18n="pizzamenu.slide2Title">Six Chef-Driven Pizzas</h1>
+                    <p class="hero-subtitle" data-i18n="pizzamenu.slide2Subtitle">Non-Customizable Perfection</p>
+                    <p class="section-content" data-i18n="pizzamenu.slide2Text">
                       From Pepperoni Rustico to Verde Fresco, each pizza is a
                       carefully curated masterpiece crafted with San Marzano
                       tomatoes and finished with signature microgreens.
                     </p>
                     <div class="hero-carousel__cta-group">
-                      <button class="btn-primary btn btn-lg">
+                      <button class="btn-primary btn btn-lg" data-i18n="pizzamenu.exploreMenu">
                         Explore the Menu
                       </button>
                     </div>
@@ -429,17 +453,17 @@
                 <div class="hero-carousel__overlay"></div>
                 <div class="hero-carousel__content-container">
                   <div class="hero-carousel__content">
-                    <h1 class="hero-title">The Microgreen Difference</h1>
-                    <p class="hero-subtitle">
+                    <h1 class="hero-title" data-i18n="pizzamenu.slide3Title">The Microgreen Difference</h1>
+                    <p class="hero-subtitle" data-i18n="pizzamenu.slide3Subtitle">
                       GMO-Free, Pesticide-Free Excellence
                     </p>
-                    <p class="section-content">
+                    <p class="section-content" data-i18n="pizzamenu.slide3Text">
                       Fresh microgreens delivered separately in compostable
                       cups. Scatter them on your pizza for the perfect finish
                       that balances every bite with vibrant, living flavor.
                     </p>
                     <div class="hero-carousel__cta-group">
-                      <button class="btn-primary btn btn-lg">Learn More</button>
+                      <button class="btn-primary btn btn-lg" data-i18n="pizzamenu.learnMore">Learn More</button>
                     </div>
                   </div>
                 </div>
@@ -450,8 +474,8 @@
         <section class="menu-list">
           <div class="menu-list__wrapper">
             <div class="menu-list__header">
-              <h2 class="section-title">Seven Chef-Driven Pizzas</h2>
-              <p class="section-subtitle">
+              <h2 class="section-title" data-i18n="pizzamenu.menuTitle">Seven Chef-Driven Pizzas</h2>
+              <p class="section-subtitle" data-i18n="pizzamenu.menuSubtitle">
                 Each pizza is a non-customizable masterpiece featuring
                 high-quality ingredients and signature microgreen finishes
               </p>
@@ -488,17 +512,17 @@
                   </div>
                 </div>
                 <div class="menu-list__item-content">
-                  <h3 class="menu-list__item-title">Funghi e Cipolla</h3>
-                  <p class="menu-list__item-subtitle">Mushroom and Onion</p>
-                  <p class="section-content">
+                  <h3 class="menu-list__item-title" data-i18n="pizzamenu.funghi_title">Funghi e Cipolla</h3>
+                  <p class="menu-list__item-subtitle" data-i18n="pizzamenu.funghi_subtitle">Mushroom and Onion</p>
+                  <p class="section-content" data-i18n="pizzamenu.funghi_desc">
                     Rich, earthy cremini mushrooms and sweet red onions on San
                     Marzano sauce with mozzarella and Parmigiano Reggiano.
                   </p>
                   <div class="menu-list__item-garnish">
-                    <span class="menu-list__garnish-label">
+                    <span class="menu-list__garnish-label" data-i18n="pizzamenu.garnishLabel">
                       Signature Finish:
                     </span>
-                    <span class="menu-list__garnish-text">
+                    <span class="menu-list__garnish-text" data-i18n="pizzamenu.funghi_garnish">
                       Radish Microgreens &amp; Fresh Basil
                     </span>
                   </div>
@@ -535,20 +559,20 @@
                   </div>
                 </div>
                 <div class="menu-list__item-content">
-                  <h3 class="menu-list__item-title">Mediterranean Coast</h3>
-                  <p class="menu-list__item-subtitle">
+                  <h3 class="menu-list__item-title" data-i18n="pizzamenu.medcoast_title">Mediterranean Coast</h3>
+                  <p class="menu-list__item-subtitle" data-i18n="pizzamenu.medcoast_subtitle">
                     Bright, Peppery &amp; Vibrant
                   </p>
-                  <p class="section-content">
+                  <p class="section-content" data-i18n="pizzamenu.medcoast_desc">
                     Mozzarella, tangy feta cheese, mixed olives, and fresh
                     tomatoes on San Marzano sauce with a pinch of red pepper
                     flakes.
                   </p>
                   <div class="menu-list__item-garnish">
-                    <span class="menu-list__garnish-label">
+                    <span class="menu-list__garnish-label" data-i18n="pizzamenu.garnishLabel">
                       Signature Finish:
                     </span>
-                    <span class="menu-list__garnish-text">Baby Arugula</span>
+                    <span class="menu-list__garnish-text" data-i18n="pizzamenu.medcoast_garnish">Baby Arugula</span>
                   </div>
                 </div>
               </div>
@@ -583,20 +607,20 @@
                   </div>
                 </div>
                 <div class="menu-list__item-content">
-                  <h3 class="menu-list__item-title">The Tuscan Gardener</h3>
-                  <p class="menu-list__item-subtitle">
+                  <h3 class="menu-list__item-title" data-i18n="pizzamenu.tuscan_title">The Tuscan Gardener</h3>
+                  <p class="menu-list__item-subtitle" data-i18n="pizzamenu.tuscan_subtitle">
                     Vegetable-Forward Excellence
                   </p>
-                  <p class="section-content">
+                  <p class="section-content" data-i18n="pizzamenu.tuscan_desc">
                     Roasted broccoli, cauliflower, peppers, and sautéed
                     mushrooms on San Marzano sauce with mozzarella and
                     Parmigiano Reggiano.
                   </p>
                   <div class="menu-list__item-garnish">
-                    <span class="menu-list__garnish-label">
+                    <span class="menu-list__garnish-label" data-i18n="pizzamenu.garnishLabel">
                       Signature Finish:
                     </span>
-                    <span class="menu-list__garnish-text">
+                    <span class="menu-list__garnish-text" data-i18n="pizzamenu.tuscan_garnish">
                       Broccoli Microgreens
                     </span>
                   </div>
@@ -633,19 +657,19 @@
                   </div>
                 </div>
                 <div class="menu-list__item-content">
-                  <h3 class="menu-list__item-title">Verde Fresco</h3>
-                  <p class="menu-list__item-subtitle">
+                  <h3 class="menu-list__item-title" data-i18n="pizzamenu.verde_title">Verde Fresco</h3>
+                  <p class="menu-list__item-subtitle" data-i18n="pizzamenu.verde_subtitle">
                     Fresh Green White Pizza
                   </p>
-                  <p class="section-content">
+                  <p class="section-content" data-i18n="pizzamenu.verde_desc">
                     Garlic-infused avocado oil with fresh parsley, lemon zest,
                     mozzarella cheese and Parmigiano Reggiano. No tomato sauce.
                   </p>
                   <div class="menu-list__item-garnish">
-                    <span class="menu-list__garnish-label">
+                    <span class="menu-list__garnish-label" data-i18n="pizzamenu.garnishLabel">
                       Signature Finish:
                     </span>
-                    <span class="menu-list__garnish-text">Baby Arugula</span>
+                    <span class="menu-list__garnish-text" data-i18n="pizzamenu.verde_garnish">Baby Arugula</span>
                   </div>
                 </div>
               </div>
@@ -680,18 +704,18 @@
                   </div>
                 </div>
                 <div class="menu-list__item-content">
-                  <h3 class="menu-list__item-title">Pepperoni Rustico</h3>
-                  <p class="menu-list__item-subtitle">Spicy, Rich &amp; Bold</p>
-                  <p class="section-content">
+                  <h3 class="menu-list__item-title" data-i18n="pizzamenu.pepperoni_title">Pepperoni Rustico</h3>
+                  <p class="menu-list__item-subtitle" data-i18n="pizzamenu.pepperoni_subtitle">Spicy, Rich &amp; Bold</p>
+                  <p class="section-content" data-i18n="pizzamenu.pepperoni_desc">
                     High-quality pepperoni with sautéed mushrooms and roasted
                     peppers, mozzarella cheese finished with hot honey for
                     gourmet contrast.
                   </p>
                   <div class="menu-list__item-garnish">
-                    <span class="menu-list__garnish-label">
+                    <span class="menu-list__garnish-label" data-i18n="pizzamenu.garnishLabel">
                       Signature Finish:
                     </span>
-                    <span class="menu-list__garnish-text">
+                    <span class="menu-list__garnish-text" data-i18n="pizzamenu.pepperoni_garnish">
                       Radish Microgreens
                     </span>
                   </div>
@@ -728,19 +752,19 @@
                   </div>
                 </div>
                 <div class="menu-list__item-content">
-                  <h3 class="menu-list__item-title">Pizza Tricolore</h3>
-                  <p class="menu-list__item-subtitle">
+                  <h3 class="menu-list__item-title" data-i18n="pizzamenu.tricolore_title">Pizza Tricolore</h3>
+                  <p class="menu-list__item-subtitle" data-i18n="pizzamenu.tricolore_subtitle">
                     The Perfect Italian Classic
                   </p>
-                  <p class="section-content">
+                  <p class="section-content" data-i18n="pizzamenu.tricolore_desc">
                     San Marzano tomato sauce, mozzarella cheese, and fresh
                     basil. A celebration of Italy's finest ingredients.
                   </p>
                   <div class="menu-list__item-garnish">
-                    <span class="menu-list__garnish-label">
+                    <span class="menu-list__garnish-label" data-i18n="pizzamenu.garnishLabel">
                       Signature Finish:
                     </span>
-                    <span class="menu-list__garnish-text">
+                    <span class="menu-list__garnish-text" data-i18n="pizzamenu.tricolore_garnish">
                       Fresh Basil Leaves
                     </span>
                   </div>
@@ -774,20 +798,20 @@
                   </div>
                 </div>
                 <div class="menu-list__item-content">
-                  <h3 class="menu-list__item-title">Midnight Marinara</h3>
-                  <p class="menu-list__item-subtitle">
+                  <h3 class="menu-list__item-title" data-i18n="pizzamenu.midnight_title">Midnight Marinara</h3>
+                  <p class="menu-list__item-subtitle" data-i18n="pizzamenu.midnight_subtitle">
                     A masterpiece of Time &amp; Tradition
                   </p>
-                  <p class="section-content">
+                  <p class="section-content" data-i18n="pizzamenu.midnight_desc">
                     San Marzano tomato sauce over aromatic garlic-infused
                     avocado oil base, finished with a savory dusting of
                     Parmigiano Reggiano and wild dried oregano.
                   </p>
                   <div class="menu-list__item-garnish">
-                    <span class="menu-list__garnish-label">
+                    <span class="menu-list__garnish-label" data-i18n="pizzamenu.garnishLabel">
                       Signature Finish:
                     </span>
-                    <span class="menu-list__garnish-text">
+                    <span class="menu-list__garnish-text" data-i18n="pizzamenu.midnight_garnish">
                       Fresh Basil Leaves
                     </span>
                   </div>
@@ -799,8 +823,8 @@
         <section class="microgreen-story">
           <div class="microgreen-story__wrapper">
             <div class="microgreen-story__header">
-              <h2 class="section-title">The Microgreen Difference</h2>
-              <p class="section-subtitle">
+              <h2 class="section-title" data-i18n="pizzamenu.microgreenTitle">The Microgreen Difference</h2>
+              <p class="section-subtitle" data-i18n="pizzamenu.microgreenSubtitle">
                 GMO-Free, Pesticide-Free Excellence That Elevates Every Bite
               </p>
             </div>
@@ -837,10 +861,10 @@
                       src="https://images.pexels.com/photos/11678841/pexels-photo-11678841.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
                     />
                   </div>
-                  <h3 class="microgreen-story__timeline-title">
+                  <h3 class="microgreen-story__timeline-title" data-i18n="pizzamenu.mg1Title">
                     Hyper-Fresh Living Greens
                   </h3>
-                  <p class="section-content">
+                  <p class="section-content" data-i18n="pizzamenu.mg1Text">
                     Our microgreens are harvested at peak freshness and
                     delivered separately to ensure they arrive crisp, vibrant,
                     and full of life. No wilting, no crushing—just living flavor
@@ -873,10 +897,10 @@
                       src="public/ai-generated/ai-generated-1765597400517-1000w.png"
                     />
                   </div>
-                  <h3 class="microgreen-story__timeline-title">
+                  <h3 class="microgreen-story__timeline-title" data-i18n="pizzamenu.mg2Title">
                     GMO-Free &amp; Pesticide-Free
                   </h3>
-                  <p class="section-content">
+                  <p class="section-content" data-i18n="pizzamenu.mg2Text">
                     We source only the purest microgreens, grown without GMOs or
                     pesticides. Every leaf represents our commitment to
                     uncompromising quality and integrity, ensuring you taste
@@ -913,10 +937,10 @@
                       src="public/ai-generated/ai-generated-1765134329588-1000w.png"
                     />
                   </div>
-                  <h3 class="microgreen-story__timeline-title">
+                  <h3 class="microgreen-story__timeline-title" data-i18n="pizzamenu.mg3Title">
                     Intentionally Balanced Flavor
                   </h3>
-                  <p class="section-content">
+                  <p class="section-content" data-i18n="pizzamenu.mg3Text">
                     Each pizza receives a signature microgreen that's
                     specifically chosen to balance and elevate its profile.
                     Radish microgreens cut through rich pepperoni, micro arugula
@@ -953,10 +977,10 @@
                       src="public/ai-generated/ai-generated-1765134544945-1000w.png"
                     />
                   </div>
-                  <h3 class="microgreen-story__timeline-title">
+                  <h3 class="microgreen-story__timeline-title" data-i18n="pizzamenu.mg4Title">
                     The Perfect Final Touch
                   </h3>
-                  <p class="section-content">
+                  <p class="section-content" data-i18n="pizzamenu.mg4Text">
                     Scatter your microgreens just before serving to experience
                     the vibrant crunch and explosive flavor that transforms each
                     bite. It's the chef's signature finish, now in your hands,
@@ -970,8 +994,8 @@
         <section class="packaging-delivery">
           <div class="packaging-delivery__container">
             <div class="packaging-delivery__header">
-              <h2 class="section-title">Packaging &amp; Delivery Excellence</h2>
-              <p class="section-subtitle">
+              <h2 class="section-title" data-i18n="pizzamenu.packagingTitle">Packaging &amp; Delivery Excellence</h2>
+              <p class="section-subtitle" data-i18n="pizzamenu.packagingSubtitle">
                 From our kitchen to your table, every detail is perfected
               </p>
             </div>
@@ -1012,10 +1036,10 @@
                         </g>
                       </svg>
                     </div>
-                    <h3 class="packaging-delivery__item-title">
+                    <h3 class="packaging-delivery__item-title" data-i18n="pizzamenu.pkg_compostable_title">
                       Compostable Microgreen Cups
                     </h3>
-                    <p class="section-content">
+                    <p class="section-content" data-i18n="pizzamenu.pkg_compostable_text">
                       Your signature microgreens arrive in clear 7 oz
                       compostable clamshell containers, ensuring they stay crisp, dry,
                       and vibrant throughout delivery. Never crushed, never
@@ -1057,10 +1081,10 @@
                         </g>
                       </svg>
                     </div>
-                    <h3 class="packaging-delivery__item-title">
+                    <h3 class="packaging-delivery__item-title" data-i18n="pizzamenu.pkg_delivery_title">
                       Seamless Delivery Partners
                     </h3>
-                    <p class="section-content">
+                    <p class="section-content" data-i18n="pizzamenu.pkg_delivery_text">
                       Order our complete menu exclusively through Uber Eats and
                       DoorDash. We manage the entire process, ensuring fast,
                       reliable delivery from our kitchen to your door with
@@ -1103,10 +1127,10 @@
                         </g>
                       </svg>
                     </div>
-                    <h3 class="packaging-delivery__item-title">
+                    <h3 class="packaging-delivery__item-title" data-i18n="pizzamenu.pkg_freshness_title">
                       Freshness Guarantee
                     </h3>
-                    <p class="section-content">
+                    <p class="section-content" data-i18n="pizzamenu.pkg_freshness_text">
                       Our packaging system is designed to preserve every element
                       of your pizza experience. Hot pizza arrives hot,
                       microgreens arrive fresh, and quality arrives
@@ -1121,8 +1145,8 @@
         <section class="craftsmanship">
           <div class="craftsmanship__container">
             <div class="craftsmanship__header">
-              <h2 class="section-title">Uncompromising Craft</h2>
-              <p class="section-subtitle">
+              <h2 class="section-title" data-i18n="pizzamenu.craft_title">Uncompromising Craft</h2>
+              <p class="section-subtitle" data-i18n="pizzamenu.craft_subtitle">
                 Every ingredient chosen for purity, flavor, and integrity
               </p>
             </div>
@@ -1151,8 +1175,8 @@
                     </g>
                   </svg>
                 </div>
-                <h3 class="craftsmanship__card-title">Avocado Oil Dough</h3>
-                <p class="section-content">
+                <h3 class="craftsmanship__card-title" data-i18n="pizzamenu.craft_avocado_title">Avocado Oil Dough</h3>
+                <p class="section-content" data-i18n="pizzamenu.craft_avocado_text">
                   Our signature handcrafted dough uses premium avocado oil for a
                   lighter, healthier base with exceptional flavor and texture.
                   Every crust is made fresh daily with high-quality flour for
@@ -1181,8 +1205,8 @@
                     </g>
                   </svg>
                 </div>
-                <h3 class="craftsmanship__card-title">San Marzano Tomatoes</h3>
-                <p class="section-content">
+                <h3 class="craftsmanship__card-title" data-i18n="pizzamenu.craft_tomato_title">San Marzano Tomatoes</h3>
+                <p class="section-content" data-i18n="pizzamenu.craft_tomato_text">
                   Our rich, vibrant sauce starts with authentic San Marzano
                   tomatoes from Italy. Known for their sweet flavor and low
                   acidity, they provide the true Italian base that defines
@@ -1210,8 +1234,8 @@
                     </g>
                   </svg>
                 </div>
-                <h3 class="craftsmanship__card-title">Fresh Mozzarella</h3>
-                <p class="section-content">
+                <h3 class="craftsmanship__card-title" data-i18n="pizzamenu.craft_mozz_title">Fresh Mozzarella</h3>
+                <p class="section-content" data-i18n="pizzamenu.craft_mozz_text">
                   We source a superior, low-moisture mozzarella that is
                   carefully selected for its rich, clean flavour and exceptional
                   melting characteristics. The result is a final texture that
@@ -1237,10 +1261,10 @@
                     ></path>
                   </svg>
                 </div>
-                <h3 class="craftsmanship__card-title">
+                <h3 class="craftsmanship__card-title" data-i18n="pizzamenu.craft_chef_title">
                   Chef-Led, Non-Customizable
                 </h3>
-                <p class="section-content">
+                <p class="section-content" data-i18n="pizzamenu.craft_chef_text">
                   We eliminate the complexity of customization to focus solely
                   on&nbsp;perfecting seven distinct, chef-driven pizzas. Every
                   ingredient combination is intentionally balanced and tested to
@@ -1254,9 +1278,9 @@
           <section class="wine-pairing">
             <div class="wine-pairing__wrapper">
               <div class="wine-pairing__header">
-                <h2 class="section-title">Wine Pairing Suggestions</h2>
-                <p class="section-subtitle">
-                  Elevate your gourmet experience with perfectly matched wines
+                <h2 class="section-title" data-i18n="pizzamenu.wine_title">Curated Pairings</h2>
+                <p class="section-subtitle" data-i18n="pizzamenu.wine_subtitle">
+                  Elevate your gourmet experience with perfectly matched pairings
                 </p>
               </div>
               <div class="wine-pairing__carousel">
@@ -1279,13 +1303,11 @@
                         ></path>
                       </svg>
                     </div>
-                    <h3 class="wine-pairing__card-title">Funghi e Cipolla</h3>
-                    <p class="wine-pairing__card-pizza">Mushroom and Onion</p>
+                    <h3 class="wine-pairing__card-title" data-i18n="pizzamenu.wine_funghi_pizza">Funghi e Cipolla</h3>
+                    <p class="wine-pairing__card-pizza" data-i18n="pizzamenu.wine_funghi_drink">Hibiscus Rise</p>
                     <div class="wine-pairing__divider"></div>
-                    <p class="section-content">
-                      Pairs beautifully with the subtle, earthy complexity of a
-                      Pinot Noir or the savory, herbaceous notes of a Cabernet
-                      Franc. Both enhance the umami richness.
+                    <p class="section-content" data-i18n="pizzamenu.wine_funghi_desc">
+                      The "Garden Lift 🌸": Naturally bubbly and floral, this local kombucha lifts the "umami" of the mushrooms and makes the sweet onions pop with flavor.
                     </p>
                   </div>
                   <div class="wine-pairing__card">
@@ -1306,15 +1328,13 @@
                         ></path>
                       </svg>
                     </div>
-                    <h3 class="wine-pairing__card-title">
+                    <h3 class="wine-pairing__card-title" data-i18n="pizzamenu.wine_medcoast_pizza">
                       Mediterranean Coast
                     </h3>
-                    <p class="wine-pairing__card-pizza">Feta &amp; Olives</p>
+                    <p class="wine-pairing__card-pizza" data-i18n="pizzamenu.wine_medcoast_drink">1642 Ginger Beer</p>
                     <div class="wine-pairing__divider"></div>
-                    <p class="section-content">
-                      Complements the crisp, fruity acidity of a Pinot Grigio or
-                      a bright, herbal Sauvignon Blanc for a refreshing palate
-                      cleanse with Mediterranean vibrancy.
+                    <p class="section-content" data-i18n="pizzamenu.wine_medcoast_desc">
+                      ​The "Spicy Med 🌶️": The spicy heat of real ginger is the ultimate match for salty feta and olives, refreshing your taste buds after every tangy bite.
                     </p>
                   </div>
                   <div class="wine-pairing__card">
@@ -1335,15 +1355,13 @@
                         ></path>
                       </svg>
                     </div>
-                    <h3 class="wine-pairing__card-title">
+                    <h3 class="wine-pairing__card-title" data-i18n="pizzamenu.wine_tuscan_pizza">
                       The Tuscan Gardener
                     </h3>
-                    <p class="wine-pairing__card-pizza">Roasted Vegetables</p>
+                    <p class="wine-pairing__card-pizza" data-i18n="pizzamenu.wine_tuscan_drink">Sanpellegrino Limonata</p>
                     <div class="wine-pairing__divider"></div>
-                    <p class="section-content">
-                      Pairs beautifully with the bright acidity and herbaceous
-                      notes of a Sauvignon Blanc or a lighter, earthy Pinot Noir
-                      that won&amp;apos;t overpower the vegetables.
+                    <p class="section-content" data-i18n="pizzamenu.wine_tuscan_desc">
+                      The "Zesty Partner 🍋": Tart and crisp, this lemon soda acts as a palate cleanser, cutting through the roasted flavors of the vegetables for a bright, clean finish.
                     </p>
                   </div>
                   <div class="wine-pairing__card">
@@ -1364,15 +1382,13 @@
                         ></path>
                       </svg>
                     </div>
-                    <h3 class="wine-pairing__card-title">Verde Fresco</h3>
-                    <p class="wine-pairing__card-pizza">
-                      White Pizza with Garlic
+                    <h3 class="wine-pairing__card-title" data-i18n="pizzamenu.wine_verde_pizza">Verde Fresco</h3>
+                    <p class="wine-pairing__card-pizza" data-i18n="pizzamenu.wine_verde_drink">
+                      Guru Organic Matcha
                     </p>
                     <div class="wine-pairing__divider"></div>
-                    <p class="section-content">
-                      Pairs well with a crisp, unoaked Chardonnay that
-                      complements the creamy mozzarella. A light-bodied Pinot
-                      Noir also balances the garlic and oil perfectly.
+                    <p class="section-content" data-i18n="pizzamenu.wine_verde_desc">
+                      The "Matcha Glow 🌿": Earthy Japanese matcha and organic lemon zest in the drink perfectly mirror the fresh parsley and citrus notes on this vibrant white pizza.
                     </p>
                   </div>
                   <div class="wine-pairing__card">
@@ -1393,13 +1409,11 @@
                         ></path>
                       </svg>
                     </div>
-                    <h3 class="wine-pairing__card-title">Pepperoni Rustico</h3>
-                    <p class="wine-pairing__card-pizza">Spicy &amp; Bold</p>
+                    <h3 class="wine-pairing__card-title" data-i18n="pizzamenu.wine_pepperoni_pizza">Pepperoni Rustico</h3>
+                    <p class="wine-pairing__card-pizza" data-i18n="pizzamenu.wine_pepperoni_drink">1642 Ginger Beer</p>
                     <div class="wine-pairing__divider"></div>
-                    <p class="section-content">
-                      Pairs perfectly with Barbera, the quintessential pizza
-                      wine with high acidity. A rich, fruity Zinfandel also
-                      holds up to the bold, spicy flavors beautifully.
+                    <p class="section-content" data-i18n="pizzamenu.wine_pepperoni_desc">
+                      ​The "Rustico Kick 🔥": The natural zing of local ginger matches the peppery bite of our radish greens, perfectly balancing the richness of the pepperoni.
                     </p>
                   </div>
                   <div class="wine-pairing__card">
@@ -1420,13 +1434,11 @@
                         ></path>
                       </svg>
                     </div>
-                    <h3 class="wine-pairing__card-title">Pizza Tricolore</h3>
-                    <p class="wine-pairing__card-pizza">Classic Italian</p>
+                    <h3 class="wine-pairing__card-title" data-i18n="pizzamenu.wine_tricolore_pizza">Pizza Tricolore</h3>
+                    <p class="wine-pairing__card-pizza" data-i18n="pizzamenu.wine_tricolore_drink">Sanpellegrino Aranciata</p>
                     <div class="wine-pairing__divider"></div>
-                    <p class="section-content">
-                      The high acidity of Chianti Classico (Sangiovese)
-                      perfectly matches the San Marzano tomatoes. A crisp Pinot
-                      Grigio is a light alternative for delicate flavors.
+                    <p class="section-content" data-i18n="pizzamenu.wine_tricolore_desc">
+                      The "Sunny Classic ☀️": The bright, sparkling orange flavor provides a refreshing "snap" that lets the herbal aroma of fresh basil truly shine.
                     </p>
                   </div>
                   <div class="wine-pairing__card">
@@ -1448,14 +1460,10 @@
                       </svg>
                     </div>
                     <h3 class="wine-pairing__card-title">Midnight Marinara</h3>
-                    <p class="wine-pairing__card-pizza">Timeless Elegance</p>
+                    <p class="wine-pairing__card-pizza">Sanpellegrino Aranciata Rossa</p>
                     <div class="wine-pairing__divider"></div>
                     <p class="section-content">
-                      We recommend a Chianti Classico; its notes of red cherry
-                      and tomato leaf beautifully mirror the sweetness of our
-                      San Marzano tomatoes. This pairing creates a timeless
-                      Italian experience that balances the savoury garlic and
-                      salty Parmigiano perfectly.
+                      ​The "Red Spotlight 🍅": A bold, ruby-red citrus soda that balances the intensity of roasted garlic and brings out the natural sweetness of our slow-simmered tomatoes.
                     </p>
                   </div>
                 </div>
@@ -1550,8 +1558,8 @@
                     </g>
                   </svg>
                 </div>
-                <h2 class="section-title">Order Gourmet Pizza Now</h2>
-                <p class="section-subtitle">
+                <h2 class="section-title" data-i18n="pizzamenu.cta_title">Order Gourmet Pizza Now</h2>
+                <p class="section-subtitle" data-i18n="pizzamenu.cta_subtitle">
                   Experience chef-perfected artisan pizza with microgreen
                   finishes delivered straight to your door
                 </p>
@@ -1561,6 +1569,7 @@
                     target="_blank"
                     rel="noreferrer noopener"
                     class="gourmet-pizza-menu-thq-btn-elm5 btn-primary btn btn-xl"
+                    data-i18n="pizzamenu.cta_ubereats"
                   >
                     Order on Uber Eats
                   </a>
@@ -1569,6 +1578,7 @@
                     target="_blank"
                     rel="noreferrer noopener"
                     class="gourmet-pizza-menu-thq-btn-elm6 btn-secondary btn btn-xl"
+                    data-i18n="pizzamenu.cta_doordash"
                   >
                     Order on DoorDash
                   </a>
@@ -1764,7 +1774,7 @@
                       src="public/elmo-pizzeria-transparent-200w.png"
                       class="footer-image"
                     />
-                    <p class="footer-tagline section-content">
+                    <p class="footer-tagline section-content" data-i18n="footer.tagline">
                       Gourmet Pizza, Delivered.
                     </p>
                   </div>
@@ -1775,28 +1785,35 @@
                       <div
                         class="footer-thq-footer-nav-link-elm1 footer-nav-link"
                       >
-                        <span>Homepage</span>
+                        <span data-i18n="footer.navHome">Homepage</span>
                       </div>
                     </a>
                     <a href="gourmet-pizza-menu.html">
                       <div
                         class="footer-thq-footer-nav-link-elm2 footer-nav-link"
                       >
-                        <span>Gourmet Pizza Menu</span>
+                        <span data-i18n="footer.navMenu">Gourmet Pizza Menu</span>
+                      </div>
+                    </a>
+                    <a href="philosophy.html">
+                      <div
+                        class="footer-thq-footer-nav-link-elm3 footer-nav-link"
+                      >
+                        <span data-i18n="footer.navPhilosophy">Our Philosophy</span>
                       </div>
                     </a>
                     <a href="about-us.html">
                       <div
-                        class="footer-thq-footer-nav-link-elm3 footer-nav-link"
+                        class="footer-thq-footer-nav-link-elm4 footer-nav-link"
                       >
-                        <span>About Us</span>
+                        <span data-i18n="footer.navAbout">About Us</span>
                       </div>
                     </a>
                     <a href="delivery-sustainability.html">
                       <div
-                        class="footer-thq-footer-nav-link-elm4 footer-nav-link"
+                        class="footer-thq-footer-nav-link-elm5 footer-nav-link"
                       >
-                        <span>Delivery &amp; Sustainability</span>
+                        <span data-i18n="footer.navDelivery">Delivery &amp; Sustainability</span>
                       </div>
                     </a>
                   </nav>
@@ -1826,7 +1843,7 @@
                           </g>
                         </svg>
                       </div>
-                      <span class="footer-contact-text section-content">
+                      <span class="footer-contact-text section-content" data-i18n="footer.address">
                         3954 Boulevard Leman, Laval
                       </span>
                     </div>
@@ -1861,7 +1878,7 @@
                       </div>
                       <a href="mailto:hello@daelmogourmetpizzeria.ca?subject=">
                         <div class="footer-contact-link section-content">
-                          <span>hello@daelmogourmetpizzeria.ca</span>
+                          <span data-i18n="footer.email">hello@daelmogourmetpizzeria.ca</span>
                         </div>
                       </a>
                     </div>
