@@ -888,11 +888,10 @@
                   </svg>
                 </div>
                 <h3 class="sustainability-quality__column-title" data-i18n="philosophy.delivery_title">
-                  Delivery-Only Model
+                  Artisan Kitchen Model
                 </h3>
                 <p class="section-content sustainability-quality__column-text" data-i18n="philosophy.delivery_text">
-                  Our entire operation is designed for delivery excellence via
-                  Uber Eats and DoorDash. We manage timing, packaging, and
+                  Our entire operation is designed for convenient pickup and flat-rate delivery. We manage timing, packaging, and
                   quality control to ensure every pizza arrives at your door as
                   if it just left our oven—hot, fresh, and perfectly presented
                   with your microgreens ready to finish.
@@ -988,9 +987,8 @@
                 <p class="cta-quality__text section-content" data-i18n="philosophy.cta_text">
                   Our pizzas are delivered fresh to your door: hot crust,
                   vibrant sauce, perfectly melted cheese, and crisp microgreens
-                  packaged separately in compostable cups. Order now via Uber
-                  Eats or DoorDash and taste the difference that ingredient
-                  purity makes.
+                  packaged separately in compostable cups. Order now and taste the 
+                  difference that ingredient purity makes.
                 </p>
                 <div class="cta-quality__buttons">
                   <a
@@ -1314,23 +1312,10 @@
     ></script>
     <script src="./js/i18n.js"></script>
     <script>
+      // Language switcher functionality - wait for i18n initialization
       document.addEventListener('DOMContentLoaded', function() {
-        const languageButtons = document.querySelectorAll('.language-switcher-btn');
-        languageButtons.forEach(button => {
-          button.addEventListener('click', function() {
-            const lang = this.getAttribute('data-lang');
-            i18n.setLanguage(lang);
-            languageButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-          });
-        });
-
-        // Set initial active button
-        const currentLang = i18n.getCurrentLanguage();
-        languageButtons.forEach(btn => {
-          if (btn.getAttribute('data-lang') === currentLang) {
-            btn.classList.add('active');
-          }
+        i18n.onReady().then(() => {
+          i18n.initializeLanguageSwitcher();
         });
       });
     </script>

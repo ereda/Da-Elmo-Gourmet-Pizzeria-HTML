@@ -403,8 +403,7 @@
                   </h1>
                   <p class="home-hero-subtitle hero-subtitle" data-i18n="home.subtitle">
                     Chef-perfected artisan pizzas with our signature microgreen
-                    finish. Uncompromising quality delivered straight to your
-                    door via Uber Eats and DoorDash.
+                    finish. Uncompromising quality with convenient pickup and delivery options.
                   </p>
                   <div class="hero-main-cta">
                     <a
@@ -514,7 +513,7 @@
                         ></path>
                       </g>
                     </svg>
-                    <h3 class="hero-main-feature-title" data-i18n="home.feature4Title">Delivery-Only</h3>
+                    <h3 class="hero-main-feature-title" data-i18n="home.feature4Title">Artisan Kitchen</h3>
                     <p class="hero-main-feature-text" data-i18n="home.feature4Text">
                       Seamless delivery experience from our kitchen to your
                       table
@@ -540,9 +539,7 @@
               <div class="cta-delivery-container">
                 <h2 class="section-title" data-i18n="home.orderHeading">Order Now, Delivered Fast</h2>
                 <p class="section-subtitle" data-i18n="home.orderSubtitle">
-                  Your gourmet pizza experience is just a tap away. Available
-                  exclusively on Uber Eats and DoorDash for seamless, reliable
-                  delivery.
+                  Schedule your pickup or choose our flat-fee delivery. Quick, convenient, and fresh to your order.
                 </p>
                 <div class="cta-delivery-buttons">
                   <div class="cta-delivery-platform">
@@ -667,9 +664,8 @@
                   </div>
                   <h3 class="gallery-menu-item-title" data-i18n="pizza.pepperoniTitle">Pepperoni Rustico</h3>
                   <p class="gallery-menu-item-description" data-i18n="pizza.pepperoniDesc">
-                    Bold and spicy with premium pepperoni, roasted peppers,
-                    mushrooms, and hot honey. Balanced by sharp radish
-                    microgreens.
+                    Bold and spicy with premium pepperoni, roasted peppers, and
+                    mushrooms. Balanced by sharp radish microgreens.
                   </p>
                 </div>
               </div>
@@ -1071,7 +1067,7 @@
                         Compostable Microgreen Cups
                       </h3>
                       <p class="features-sustainability-card-text" data-i18n="features.compostableText">
-                        Your microgreens arrive in clear 7 oz compostable
+                        Your microgreens arrive in clear compostable
                         clamshell containers, ensuring they stay crisp, dry, and
                         vibrant. Never crushed or wilted during transport,
                         they're ready for the perfect final scatter on your
@@ -1196,8 +1192,8 @@
                         Seamless Delivery Process
                       </h3>
                       <p class="features-sustainability-card-text" data-i18n="features.deliveryText">
-                        We manage the entire delivery experience through trusted
-                        partners Uber Eats and DoorDash. Fast, reliable, and
+                        We manage the entire delivery experience with convenient
+                        pickup and flat-rate delivery options. Fast, reliable, and
                         tracked in real-time, your gourmet pizza arrives exactly
                         when you expect it.
                       </p>
@@ -1976,26 +1972,10 @@
     ></script>
     <script src="./js/i18n.js"></script>
     <script>
-      // Language switcher functionality
+      // Language switcher functionality - wait for i18n initialization
       document.addEventListener('DOMContentLoaded', function() {
-        const langButtons = document.querySelectorAll('.language-switcher-btn');
-        langButtons.forEach(button => {
-          button.addEventListener('click', function() {
-            const selectedLang = this.getAttribute('data-lang');
-            i18n.setLanguage(selectedLang);
-            
-            // Update active button
-            langButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-          });
-        });
-
-        // Set initial active button
-        const currentLang = i18n.getCurrentLanguage();
-        langButtons.forEach(btn => {
-          if (btn.getAttribute('data-lang') === currentLang) {
-            btn.classList.add('active');
-          }
+        i18n.onReady().then(() => {
+          i18n.initializeLanguageSwitcher();
         });
       });
     </script>

@@ -405,7 +405,7 @@
                 <span>
                   Da Elmo Gourmet Pizzeria was born from a singular vision: to
                   deliver a true&nbsp;gourmet pizza experience without
-                  compromise. We are a delivery-first,&nbsp;artisan kitchen
+                  compromise. We are an&nbsp;artisan kitchen
                   dedicated to perfecting every element of our craft.
                 </span>
                 <br />
@@ -539,7 +539,7 @@
                 </div>
                 <h3 class="services-delivery-card-title" data-i18n="about.delivery_card1_title">Kitchen Mastery</h3>
                 <p class="services-delivery-card-text" data-i18n="about.delivery_card1_text">
-                  Every pizza is handcrafted by trained chefs in our artisan
+                  Every pizza is handcrafted in our artisan
                   kitchen, using premium avocado oil dough and San Marzano
                   tomatoes.
                 </p>
@@ -1164,8 +1164,7 @@
                     <h3 class="gallery-menu-title" data-i18n="about.pizza_pepperoni_title">Pepperoni Rustico</h3>
                     <p class="gallery-menu-description" data-i18n="about.pizza_pepperoni_desc">
                       High-quality pepperoni with sautéed mushrooms and roasted
-                      peppers on San Marzano base. Hot honey drizzle and radish
-                      microgreens deliver bold, spicy contrast.
+                      peppers on San Marzano base. Radish microgreens deliver bold, spicy contrast.
                     </p>
                     <div class="gallery-menu-badge">
                       <span data-i18n="about.pizza_pepperoni_badge">Radish Microgreens</span>
@@ -1235,7 +1234,7 @@
                     Compostable Cups
                   </h3>
                   <p class="about-us-features-sustainability-card-text" data-i18n="about.sustainability_card1_text">
-                    Our microgreens arrive in 7 oz compostable clamshell containers that
+                    Our microgreens arrive in compostable clamshell containers that
                     break down naturally, reducing environmental impact while
                     keeping your garnish crisp and vibrant.
                   </p>
@@ -1468,8 +1467,8 @@
                       updateCarousel()
                     }
 
-                    prevBtn.addEventListener("click", () => goToSlide(currentIndex - 1))
-                    nextBtn.addEventListener("click", () => goToSlide(currentIndex + 1))
+                    if (prevBtn) prevBtn.addEventListener("click", () => goToSlide(currentIndex - 1))
+                    if (nextBtn) nextBtn.addEventListener("click", () => goToSlide(currentIndex + 1))
 
                     indicators.forEach((indicator, index) => {
                       indicator.addEventListener("click", () => goToSlide(index))
@@ -1522,8 +1521,8 @@
                       updateCarousel()
                     }
 
-                    prevBtn.addEventListener("click", () => moveCarousel("prev"))
-                    nextBtn.addEventListener("click", () => moveCarousel("next"))
+                    if (prevBtn) prevBtn.addEventListener("click", () => moveCarousel("prev"))
+                    if (nextBtn) nextBtn.addEventListener("click", () => moveCarousel("next"))
 
                     window.addEventListener("resize", () => {
                       currentPosition = 0
@@ -1567,8 +1566,8 @@
                       updateCarousel()
                     }
 
-                    prevBtn.addEventListener("click", () => moveCarousel("prev"))
-                    nextBtn.addEventListener("click", () => moveCarousel("next"))
+                    if (prevBtn) prevBtn.addEventListener("click", () => moveCarousel("prev"))
+                    if (nextBtn) nextBtn.addEventListener("click", () => moveCarousel("next"))
 
                     window.addEventListener("resize", () => {
                       currentPosition = 0
@@ -1809,23 +1808,10 @@
     ></script>
     <script src="./js/i18n.js"></script>
     <script>
+      // Language switcher functionality - wait for i18n initialization
       document.addEventListener('DOMContentLoaded', function() {
-        const languageButtons = document.querySelectorAll('.language-switcher-btn');
-        languageButtons.forEach(button => {
-          button.addEventListener('click', function() {
-            const lang = this.getAttribute('data-lang');
-            i18n.setLanguage(lang);
-            languageButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-          });
-        });
-
-        // Set initial active button
-        const currentLang = i18n.getCurrentLanguage();
-        languageButtons.forEach(btn => {
-          if (btn.getAttribute('data-lang') === currentLang) {
-            btn.classList.add('active');
-          }
+        i18n.onReady().then(() => {
+          i18n.initializeLanguageSwitcher();
         });
       });
     </script>
