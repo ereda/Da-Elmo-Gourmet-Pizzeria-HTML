@@ -71,18 +71,10 @@
     <link rel="stylesheet" href="./style.css" />
     <script src="./js/i18n.js"></script>
     <script>
+      // Language switcher functionality - wait for i18n initialization
       document.addEventListener('DOMContentLoaded', function() {
-        const i18n = new I18n();
-        i18n.init().then(() => {
-          const langButtons = document.querySelectorAll('.language-switcher-btn');
-          langButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-              const lang = btn.getAttribute('data-lang');
-              i18n.setLanguage(lang);
-              langButtons.forEach(b => b.classList.remove('active'));
-              btn.classList.add('active');
-            });
-          });
+        i18n.onReady().then(() => {
+          i18n.initializeLanguageSwitcher();
         });
       });
     </script>
@@ -409,7 +401,7 @@
                         class="gourmet-pizza-menu-thq-btn-elm1 btn-primary btn btn-lg"
                         data-i18n="pizzamenu.orderUberEats"
                       >
-                        Order on Uber Eats
+                        Schedule Pickup
                       </a>
                       <a
                         href="https://www.doordash.com/?msockid=1298bc78b6d86c021899a903b7b56de6"
@@ -418,30 +410,8 @@
                         class="gourmet-pizza-menu-thq-btn-elm2 btn btn-outline btn-lg"
                         data-i18n="pizzamenu.orderDoorDash"
                       >
-                        Order on DoorDash
+                        Flat Fee Delivery
                       </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="hero-carousel__slide">
-                <div
-                  class="gourmet-pizza-menu-thq-hero-carouselbg-layer-elm2 hero-carousel__bg-layer"
-                ></div>
-                <div class="hero-carousel__overlay"></div>
-                <div class="hero-carousel__content-container">
-                  <div class="hero-carousel__content">
-                    <h1 class="hero-title" data-i18n="pizzamenu.slide2Title">Six Chef-Driven Pizzas</h1>
-                    <p class="hero-subtitle" data-i18n="pizzamenu.slide2Subtitle">Non-Customizable Perfection</p>
-                    <p class="section-content" data-i18n="pizzamenu.slide2Text">
-                      From Pepperoni Rustico to Verde Fresco, each pizza is a
-                      carefully curated masterpiece crafted with San Marzano
-                      tomatoes and finished with signature microgreens.
-                    </p>
-                    <div class="hero-carousel__cta-group">
-                      <button class="btn-primary btn btn-lg" data-i18n="pizzamenu.exploreMenu">
-                        Explore the Menu
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -463,7 +433,15 @@
                       that balances every bite with vibrant, living flavor.
                     </p>
                     <div class="hero-carousel__cta-group">
-                      <button class="btn-primary btn btn-lg" data-i18n="pizzamenu.learnMore">Learn More</button>
+                      <a
+                        href="#microgreen-story"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        class="gourmet-pizza-menu-thq-btn-elm2 btn btn-outline btn-lg"
+                        data-i18n="pizzamenu.learnMore"
+                      >
+                        Learn More
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -820,7 +798,7 @@
             </div>
           </div>
         </section>
-        <section class="microgreen-story">
+        <section class="microgreen-story" id="microgreen-story">
           <div class="microgreen-story__wrapper">
             <div class="microgreen-story__header">
               <h2 class="section-title" data-i18n="pizzamenu.microgreenTitle">The Microgreen Difference</h2>
@@ -1639,8 +1617,8 @@
                     showHeroSlide(heroCurrentIndex)
                   }
 
-                  heroNextBtn.addEventListener("click", nextHeroSlide)
-                  heroPrevBtn.addEventListener("click", prevHeroSlide)
+                  if (heroNextBtn) heroNextBtn.addEventListener("click", nextHeroSlide)
+                  if (heroPrevBtn) heroPrevBtn.addEventListener("click", prevHeroSlide)
 
                   heroIndicators.forEach((indicator, index) => {
                     indicator.addEventListener("click", () => {
@@ -1686,8 +1664,8 @@
                     showPackagingItem(packagingCurrentIndex)
                   }
 
-                  packagingNextBtn.addEventListener("click", nextPackagingItem)
-                  packagingPrevBtn.addEventListener("click", prevPackagingItem)
+                  if (packagingNextBtn) packagingNextBtn.addEventListener("click", nextPackagingItem)
+                  if (packagingPrevBtn) packagingPrevBtn.addEventListener("click", prevPackagingItem)
 
                   const pizzaGallery = document.querySelector(".pizza-gallery")
                   const pizzaSlides = pizzaGallery.querySelectorAll(
@@ -1726,8 +1704,8 @@
                     showPizzaSlide(pizzaCurrentIndex)
                   }
 
-                  pizzaNextBtn.addEventListener("click", nextPizzaSlide)
-                  pizzaPrevBtn.addEventListener("click", prevPizzaSlide)
+                  if (pizzaNextBtn) pizzaNextBtn.addEventListener("click", nextPizzaSlide)
+                  if (pizzaPrevBtn) pizzaPrevBtn.addEventListener("click", prevPizzaSlide)
 
                   pizzaIndicators.forEach((indicator, index) => {
                     indicator.addEventListener("click", () => {
@@ -1752,8 +1730,8 @@
                     })
                   }
 
-                  wineNextBtn.addEventListener("click", () => scrollWineCarousel("next"))
-                  winePrevBtn.addEventListener("click", () => scrollWineCarousel("prev"))
+                  if (wineNextBtn) wineNextBtn.addEventListener("click", () => scrollWineCarousel("next"))
+                  if (winePrevBtn) winePrevBtn.addEventListener("click", () => scrollWineCarousel("prev"))
                 })()
               });
             </script>

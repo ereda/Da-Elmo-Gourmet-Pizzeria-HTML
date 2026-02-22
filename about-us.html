@@ -1467,8 +1467,8 @@
                       updateCarousel()
                     }
 
-                    prevBtn.addEventListener("click", () => goToSlide(currentIndex - 1))
-                    nextBtn.addEventListener("click", () => goToSlide(currentIndex + 1))
+                    if (prevBtn) prevBtn.addEventListener("click", () => goToSlide(currentIndex - 1))
+                    if (nextBtn) nextBtn.addEventListener("click", () => goToSlide(currentIndex + 1))
 
                     indicators.forEach((indicator, index) => {
                       indicator.addEventListener("click", () => goToSlide(index))
@@ -1521,8 +1521,8 @@
                       updateCarousel()
                     }
 
-                    prevBtn.addEventListener("click", () => moveCarousel("prev"))
-                    nextBtn.addEventListener("click", () => moveCarousel("next"))
+                    if (prevBtn) prevBtn.addEventListener("click", () => moveCarousel("prev"))
+                    if (nextBtn) nextBtn.addEventListener("click", () => moveCarousel("next"))
 
                     window.addEventListener("resize", () => {
                       currentPosition = 0
@@ -1566,8 +1566,8 @@
                       updateCarousel()
                     }
 
-                    prevBtn.addEventListener("click", () => moveCarousel("prev"))
-                    nextBtn.addEventListener("click", () => moveCarousel("next"))
+                    if (prevBtn) prevBtn.addEventListener("click", () => moveCarousel("prev"))
+                    if (nextBtn) nextBtn.addEventListener("click", () => moveCarousel("next"))
 
                     window.addEventListener("resize", () => {
                       currentPosition = 0
@@ -1808,23 +1808,10 @@
     ></script>
     <script src="./js/i18n.js"></script>
     <script>
+      // Language switcher functionality - wait for i18n initialization
       document.addEventListener('DOMContentLoaded', function() {
-        const languageButtons = document.querySelectorAll('.language-switcher-btn');
-        languageButtons.forEach(button => {
-          button.addEventListener('click', function() {
-            const lang = this.getAttribute('data-lang');
-            i18n.setLanguage(lang);
-            languageButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-          });
-        });
-
-        // Set initial active button
-        const currentLang = i18n.getCurrentLanguage();
-        languageButtons.forEach(btn => {
-          if (btn.getAttribute('data-lang') === currentLang) {
-            btn.classList.add('active');
-          }
+        i18n.onReady().then(() => {
+          i18n.initializeLanguageSwitcher();
         });
       });
     </script>

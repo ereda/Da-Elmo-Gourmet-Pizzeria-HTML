@@ -1972,26 +1972,10 @@
     ></script>
     <script src="./js/i18n.js"></script>
     <script>
-      // Language switcher functionality
+      // Language switcher functionality - wait for i18n initialization
       document.addEventListener('DOMContentLoaded', function() {
-        const langButtons = document.querySelectorAll('.language-switcher-btn');
-        langButtons.forEach(button => {
-          button.addEventListener('click', function() {
-            const selectedLang = this.getAttribute('data-lang');
-            i18n.setLanguage(selectedLang);
-            
-            // Update active button
-            langButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-          });
-        });
-
-        // Set initial active button
-        const currentLang = i18n.getCurrentLanguage();
-        langButtons.forEach(btn => {
-          if (btn.getAttribute('data-lang') === currentLang) {
-            btn.classList.add('active');
-          }
+        i18n.onReady().then(() => {
+          i18n.initializeLanguageSwitcher();
         });
       });
     </script>
